@@ -53,17 +53,30 @@ const theme = createTheme({
   },
   components: {
     // MuiCssBaseline: {
-    //   styleOverrides: `
-    //   @font-face {
-    //     font-family: 'Estedad-Regular';
-    //     src: url(${estedadRegular});
+    //   styleOverrides: {
+    //     textAlign: 'right' 
     //   }
-    //   `
     // },
     MuiToolbar: {
       styleOverrides: {
         root: {
           padding: 10
+        }
+      }
+    },
+    // MuiTypography: {
+    //   styleOverrides: {
+    //     root: {
+    //       textAlign: 'right'
+    //     }
+    //   }
+    // },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderColor: 'black',
+          marginTop: '15px',
+          marginBottom: '20px'
         }
       }
     }
