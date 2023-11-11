@@ -1,0 +1,10 @@
+.carousel_info {
+  border-radius: 10px;
+  background: rgba(146, 134, 145, 0.7);
+  position: absolute;
+  z-index: 2;
+  right: 85px;
+  bottom: 50px;
+  padding: 20px;
+  text-align: center;
+}

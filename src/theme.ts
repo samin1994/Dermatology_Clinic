@@ -6,6 +6,24 @@ import { createTheme } from '@mui/material/styles';
 // Create a theme instance.
 //const defaultTheme = createTheme()
 
+declare module '@mui/material/styles/createTypography' {
+  interface Typography {
+    number: React.CSSProperties;
+  }
+
+  // allow configuration using `createMuiTheme`
+  interface TypographyOptions {
+    number?: React.CSSProperties;
+  }
+}
+
+declare module "@mui/material/Typography/Typography" {
+  interface TypographyPropsVariantOverrides {
+    number: true;
+    h3: false;
+  }
+}
+
 const theme = createTheme({
   direction: 'rtl',
   
@@ -28,7 +46,10 @@ const theme = createTheme({
     divider: 'rgba(152,152,152,0.12)',
   },
   typography: {
-    fontFamily: 'Estedad'
+    fontFamily: 'Estedad',
+    number: {
+      fontFamily: 'Estedad-FD'
+    }
   },
   components: {
     // MuiCssBaseline: {
