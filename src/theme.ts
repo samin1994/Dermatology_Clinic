@@ -64,6 +64,16 @@ const theme = createTheme({
         }
       }
     },
+    MuiTypography: {
+      styleOverrides: {
+        h5: {
+          fontWeight: '600'
+        },
+        h6: {
+          fontWeight: '600'
+        }
+      }
+    },
     MuiDivider: {
       styleOverrides: {
         root: {

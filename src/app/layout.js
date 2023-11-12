@@ -3,6 +3,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from "@/components/Layout/Navbar"
+import Footer from '@/components/Layout/Footer/Footer'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme'
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
           <div>
             <Navbar />
             {children}
-            
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

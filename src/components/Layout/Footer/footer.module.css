@@ -1,0 +1,69 @@
+.container {
+  background-color: #928691;
+  width: 100%;
+  height: 385px;
+}
+
+.upperPart {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 70px;
+  gap: 10px;
+}
+
+.rightSection {
+  padding-top: 65px;
+  flex: 2;
+}
+
+.address {
+  font-family: 'Estedad';
+  max-width: 280px;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.phoneIcon {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 3;
+  padding-top: 45px;
+}
+
+.description {
+  max-width: 495px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.lowerSection {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 70px;
+  margin-top: 15px;
+}
+
+.socialIcon {
+  color: black;
+}
+
+.socialIcon:first-child {
+  margin-left: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+.menuItem {
+  cursor: pointer;
+  color: black;
+}

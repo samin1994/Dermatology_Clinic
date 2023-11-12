@@ -6,10 +6,9 @@ IconButton, Button } from '@mui/material'
 import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link'
+import {menu} from '@/Constants'
 
 export default function Navbar() {
-
-  const menu = ['خانه', 'خدمات', 'سوالات متداول', 'درباره ما', 'تماس با ما'];
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
