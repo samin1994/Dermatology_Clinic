@@ -27,8 +27,8 @@
 }
 
 .imgContainer {
-  min-width: 300px;
-  height: 300px;
+  min-width: 200px;
+  height: 200px;
   position: relative;
   flex: 1;
   margin-left: 60px;
@@ -44,4 +44,18 @@
 
 .readMore {
   text-decoration: none;
+}
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.moreButton {
+  width: 195px;
+  height: 60px;
+  font-weight: 500;
+  font-size: 18px;
 }

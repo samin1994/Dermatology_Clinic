@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{direction:'ltr'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between', flexDirection: 'row'}}>
           <Link href={'/'} passHref legacyBehavior>

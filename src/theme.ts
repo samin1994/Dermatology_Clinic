@@ -36,7 +36,7 @@ const theme = createTheme({
       main: '#20973E',
     },
     background: {
-      paper: '#928691',
+      paper: 'white',
     },
     text: {
       primary: '#A22F97',
@@ -64,19 +64,31 @@ const theme = createTheme({
         }
       }
     },
-    // MuiTypography: {
-    //   styleOverrides: {
-    //     root: {
-    //       textAlign: 'right'
-    //     }
-    //   }
-    // },
     MuiDivider: {
       styleOverrides: {
         root: {
           borderColor: 'black',
           marginTop: '15px',
           marginBottom: '20px'
+        }
+      }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: '7px 7px 22px -2px rgba(0,0,0,0.66)',
+          borderRadius: '7px'
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        containedPrimary: {
+          backgroundColor: '#A22F97',
+          color: 'white',
+          "&:hover": {
+            backgroundColor: '#85267B'
+          }
         }
       }
     }
