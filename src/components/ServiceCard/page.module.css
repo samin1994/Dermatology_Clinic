@@ -42,6 +42,7 @@
   transition-timing-function: ease;
   transition-delay: 0s;
   transition-property: all;
+  border-bottom: 2px solid #a22f97;
 }
 
 .whiteIcon {
