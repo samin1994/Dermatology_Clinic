@@ -22,8 +22,8 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position='fixed' sx={{direction:'ltr', zIndex: 3, top: 0, borderRadius: 0}}>
-      <Container maxWidth="xl">
+    <AppBar position='fixed' color='background' sx={{direction:'ltr', zIndex: 3, top: 0, borderRadius: 0}}>
+      <Box maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between', flexDirection: 'row'}}>
           <Link href={'/'} passHref legacyBehavior>
               <Box sx={{ cursor: 'pointer', display: { xs: 'none', md: 'flex' }, alignItems:'center', direction: 'ltr' }}>
@@ -33,9 +33,9 @@ export default function Navbar() {
                 width={70}
                 height={70}
               />
-              <Typography ml={0.5} color='text.primary'>Dr. </Typography>
+              <Typography ml={0.5} color='text.secondary'>Dr. </Typography>
               <Typography ml={0.5} color='secondary.main'>Negin</Typography>
-              <Typography ml={0.5} color='text.primary'>Safdarian</Typography>
+              <Typography ml={0.5} color='text.secondary'>Safdarian</Typography>
             </Box>
           </Link>
 
@@ -80,9 +80,9 @@ export default function Navbar() {
             </Menu>
           </Box>
           <Box sx={{ cursor: 'pointer', display: { xs: 'flex', md: 'none', direction: 'ltr' }}} >
-            <Typography color='text.primary'>Dr. </Typography>
+            <Typography color='text.secondary'>Dr. </Typography>
             <Typography color='secondary.main'>Negin</Typography>
-            <Typography color='text.primary'>Safdarian</Typography>
+            <Typography color='text.secondary'>Safdarian</Typography>
             <Image
               src='/neg_vector.png'
               alt="Dr Negin Safdarian"
@@ -100,12 +100,12 @@ export default function Navbar() {
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 className={styles.link}
               >
-                <Typography ml={3} color='text.primary'>{menu.name}</Typography>
+                <Typography ml={3} color='text.secondary'>{menu.name}</Typography>
               </Link>
             ))}
           </Box>
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>  
   )
 }

@@ -21,7 +21,7 @@ const Footer = () => {
                 </Box>
                 <Typography className={styles.address}>
                     تهران، خیابان پاسداران، بالاتر از گل نبی، بین
-                     دشتستان <Typography variant='number'>7</Typography> و 8، ساختمان سینا، پلاک <Typography variant='number'>104</Typography>، طبقه
+                     دشتستان <Typography variant='number'>7</Typography> و <Typography variant='number'>8</Typography>، ساختمان سینا، پلاک <Typography variant='number'>104</Typography>، طبقه
                       <Typography variant='number'>3</Typography>، واحد <Typography variant='number'>21</Typography></Typography>
                 <Box display='flex' alignItems='center'>
                     <PhoneInTalkIcon className={styles.phoneIcon} sx={{ml:'7px'}}/>

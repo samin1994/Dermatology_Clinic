@@ -30,16 +30,16 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#e2befa',
+      main: '#A22F97',
     },
     secondary: {
       main: '#20973E',
     },
     background: {
-      paper: 'white',
+      paper: '#e2befa',
     },
     text: {
-      primary: '#A22F97',
+      primary: 'rgb(0,0,0)',
       secondary: '#A22F97',
       disabled: '#6d6d6d',
     },
@@ -57,6 +57,13 @@ const theme = createTheme({
     //     textAlign: 'right' 
     //   }
     // },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          marginTop: '40px'
+        }
+      }
+    },
     MuiToolbar: {
       styleOverrides: {
         root: {
@@ -92,8 +99,15 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          boxShadow: '7px 7px 22px -2px rgba(0,0,0,0.66)',
+          boxShadow: '4px 4px 22px -3px rgba(0,0,0,0.66)',
           borderRadius: '7px'
+        }
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'white'
         }
       }
     },
@@ -105,6 +119,13 @@ const theme = createTheme({
           "&:hover": {
             backgroundColor: '#85267B'
           }
+        }
+      }
+    },
+    MuiIcon: {
+      styleOverrides: {
+        colorPrimary: {
+          color: 'black'
         }
       }
     }

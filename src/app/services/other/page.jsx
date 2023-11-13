@@ -19,7 +19,7 @@ const OtherServices = () => {
     <Container className={styles.container}>
         <Box className={styles.mainTitle}>
           <Image src='/neg_vector.png' width={110} height={137}/>
-          <Typography variant='h4' color='text.primary'>سایر خدمات متفرقه</Typography>
+          <Typography variant='h4' color='text.secondary'>سایر خدمات متفرقه</Typography>
         </Box>
         <Box className={styles.services}>
           <Grid container direction='row' justifyContent='center' columnSpacing={4} rowSpacing={7}>

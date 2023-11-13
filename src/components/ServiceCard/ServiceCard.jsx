@@ -12,7 +12,7 @@ const ServiceCard = ({image, url, icons, text}) => {
           <Image src={icons[0]} width={40} height={40} alt={text} className={styles.icon}/>
           <Image src={icons[1]} width={40} height={40} alt={text} className={styles.whiteIcon}/> {/*white icon */}
           <Typography className={styles.serviceTitle}
-          variant='h5' color='text.primary'>
+          variant='h5' color='text.secondary'>
             {text}
           </Typography>
         </Box>

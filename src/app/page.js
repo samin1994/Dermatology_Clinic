@@ -22,7 +22,7 @@ export default function Home() {
         <Box className={styles.biography} flexDirection='row'>
           <Box className={styles.imgContainer}><Image style={styles.img} src='/doctor_image.webp' fill={true}/></Box>
           <Box sx={{direction: 'rtl'}}>
-            <Typography variant='h3' color='text.primary'>دکتر نگین صفدریان</Typography>  
+            <Typography variant='h3' color='text.secondary'>دکتر نگین صفدریان</Typography>  
             <Divider />
             <p className={styles.bioText}>دکتر نگین صفدریان در سال <span>1371</span> از دانشکده پزشکی دانشگاه تهران با معدل عالی فارغ التحصیل شدند، و مجددا در سال <span>1373</span> دوره ی تخصصی پوست و مو را شروع، و در سال <span>1377</span> از دانشگاه تهران فارغ التحصیل شدند. ایشان رتبه سوم در بورد تخصصی در کل کشور بوده و &nbsp;...</p>
             <Link href='#' style={{textDecoration: 'none'}}><Typography color='disabled'>مطالعه بیشتر</Typography></Link>
