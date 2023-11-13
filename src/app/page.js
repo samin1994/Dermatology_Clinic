@@ -4,12 +4,11 @@ import Slider from '@/components/Slider/Slider'
 import Link from 'next/link'
 import { Box, Divider, Typography, Button} from '@mui/material'
 import ServiceCard from '@/components/ServiceCard/ServiceCard'
+import { sharedMetadata } from '@/utils'
 
 export const metadata = {
+  ...sharedMetadata,
   title: 'کلینیک دکتر صفدریان',
-  icons: {
-    icon: '/neg_vector.png', // /public path
-  },
 }
 
 export default function Home() {
@@ -37,9 +36,11 @@ export default function Home() {
           <ServiceCard text='لیزرها' image='/laser.jpg' url='#' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
         </Box>
         <Box display='flex' justifyContent='center' mb={10}>
-          <Button variant='contained' color='primary' className={styles.moreButton}>
-            مشاهده تمام خدمات
-          </Button>
+          <Link href='/services'>
+            <Button variant='contained' color='primary' className={styles.moreButton}>
+              مشاهده تمام خدمات
+            </Button>
+          </Link>
         </Box>
       </Box>
     </main>

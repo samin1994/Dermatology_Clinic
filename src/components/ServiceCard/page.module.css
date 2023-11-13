@@ -37,6 +37,11 @@
   z-index: 1;
   background-color: white;
   width: 100%;
+  transition-behavior: normal;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
 }
 
 .whiteIcon {
@@ -44,7 +49,7 @@
 }
 
 .imgContainer {
-  width: 350px;
+  width: 100%;
   flex: 4;
   position: relative;
   transition: transform ease 0.5s; /* Animation */

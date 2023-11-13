@@ -58,4 +58,9 @@
   height: 60px;
   font-weight: 500;
   font-size: 18px;
+  transition: transform ease 0.5s;
+}
+
+.moreButton:hover {
+  transform: scale(1.2);
 }

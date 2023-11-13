@@ -7,6 +7,7 @@ import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link'
 import {menu} from '@/Constants'
+import styles from './navbar.module.css'
 
 export default function Navbar() {
 
@@ -21,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{direction:'ltr'}}>
+    <AppBar position='fixed' sx={{direction:'ltr', zIndex: 3, top: 0, borderRadius: 0}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between', flexDirection: 'row'}}>
           <Link href={'/'} passHref legacyBehavior>
@@ -67,11 +68,15 @@ export default function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             > 
-              {menu.map((menu) => (
-                <MenuItem key={menu} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{menu}</Typography>
-                </MenuItem>
-              ))}
+              {menu.map((menu) => {
+                return (
+                  <Link href={`${menu.link}`} key={menu.name}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{menu.name}</Typography>
+                  </MenuItem>
+                </Link>
+                )
+              })}
             </Menu>
           </Box>
           <Box sx={{ cursor: 'pointer', display: { xs: 'flex', md: 'none', direction: 'ltr' }}} >
@@ -88,13 +93,15 @@ export default function Navbar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent:'right', mr: '40px', flexDirection: 'row-reverse' }}>
 
             {menu.map((menu) => (
-              <Button
-                key={menu}
+              <Link
+                href={`${menu.link}`}
+                key={menu.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                className={styles.link}
               >
-                <Typography ml={3} color='text.primary'>{menu}</Typography>
-              </Button>
+                <Typography ml={3} color='text.primary'>{menu.name}</Typography>
+              </Link>
             ))}
           </Box>
         </Toolbar>

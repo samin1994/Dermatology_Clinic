@@ -1,6 +1,6 @@
 import styles from './footer.module.css'
 import React from 'react'
-import { Typography, Box, Divider, Menu, MenuItem, Button} from '@mui/material'
+import { Typography, Box, Divider } from '@mui/material'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -42,10 +42,10 @@ const Footer = () => {
             </Box>
         </Box>
         <Box className={styles.lowerSection}>
-            <Box sx={{ display: 'flex', justifyContent:'right', flexDirection: 'row-reverse' }}>
+            <Box sx={{ display: 'flex', justifyContent:'right' }}>
                 {menu.map((menu) => (
-                <Link href='/#' className={styles.link}>
-                    <Typography variant='body2' className={styles.menuItem} key={menu} ml={3}>{menu}</Typography>
+                <Link href={`${menu.link}`} className={styles.link} key={menu.name}>
+                    <Typography variant='body2' className={styles.menuItem} ml={3}>{menu.name}</Typography>
                 </Link>
                 ))}
             </Box>

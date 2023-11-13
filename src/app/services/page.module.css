@@ -1,0 +1,15 @@
+.container {
+  flex-grow: 1;
+  padding-top: 40px;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-bottom: 80px;
+}
