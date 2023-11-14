@@ -30,7 +30,7 @@ const page = () => {
               <ServiceCard text='لیفت با نخ' image='/lift.jpg' url='#' icons={['/lift-icon.png', '/lift-icon-white.png']}/> 
             </Grid>
             <Grid item xs={6} md={4}>
-              <ServiceCard text='لیزرها' image='/laser.jpg' url='#' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
+              <ServiceCard text='لیزرها' image='/laser.jpg' url='/services/lasers' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
             </Grid>
             <Grid item xs={6} md={4}>
               <ServiceCard text='سایر خدمات' image='/miscellaneous.png' url='/services/other' icons={['/miscellaneous-icon.png', '/miscellaneous-white.png']}/>

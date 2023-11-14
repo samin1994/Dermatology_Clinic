@@ -9,8 +9,14 @@ const ServiceCard = ({image, url, icons, text}) => {
     <Link href={url} style={{textDecoration: 'none'}}>
     <Card className={styles.container}>
         <Box className={styles.titleContainer}>
+          {icons !== '' ? 
+          <>
           <Image src={icons[0]} width={40} height={40} alt={text} className={styles.icon}/>
           <Image src={icons[1]} width={40} height={40} alt={text} className={styles.whiteIcon}/> {/*white icon */}
+          </>
+          :
+          null
+          }
           <Typography className={styles.serviceTitle}
           variant='h5' color='text.secondary'>
             {text}
