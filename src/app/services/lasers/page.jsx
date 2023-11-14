@@ -40,6 +40,12 @@ const LasersList = () => {
             <Grid item xs={6} md={4}>
               <ServiceCard text='RF فرکشنال' image='/services/RF-fractional.gif' url='#' icons={''}/>
             </Grid>
+            <Grid item xs={6} md={4}>
+              <ServiceCard text='اندولیفت' image='/services/endolift.jpg' url='#' icons={''}/>
+            </Grid>
+            <Grid item xs={6} md={4}>
+              <ServiceCard text='IPL Bipolar' image='/services/IPL-bipolar.png' url='#' icons={''} className={styles.ipl}/>
+            </Grid>
           </Grid>
         </Box>
     </Container>

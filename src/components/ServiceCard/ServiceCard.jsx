@@ -4,7 +4,7 @@ import { Box, Typography, Card, CardMedia} from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ServiceCard = ({image, url, icons, text}) => {
+const ServiceCard = ({image, url, icons, text, objectFit}) => {
   return (
     <Link href={url} style={{textDecoration: 'none'}}>
     <Card className={styles.container}>
@@ -23,7 +23,7 @@ const ServiceCard = ({image, url, icons, text}) => {
           </Typography>
         </Box>
         <CardMedia className={styles.imgContainer}>
-            <Image src={image} fill={true} style={{objectFit: 'cover'}} />
+            <Image src={image} fill={true} style={{objectFit: objectFit ? objectFit : 'cover'}} />
         </CardMedia>
     </Card>
     </Link>
