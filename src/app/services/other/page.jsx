@@ -24,7 +24,10 @@ const OtherServices = () => {
         <Box className={styles.services}>
           <Grid container direction='row' justifyContent='center' columnSpacing={4} rowSpacing={7}>
             <Grid item xs={6} md={4}>
-              <ServiceCard text='میکرودرم' image='/services/other/microderm.jpg' url='/services/other/microderm' icons={['/services/other/microderm-icon.png', '/services/other/microderm-white.png']}/>
+              <ServiceCard text='میکرودرم' image='/services/other/microderm.jpg' url='/services/other/microderm' icons={''}/>
+            </Grid>
+            <Grid item xs={6} md={4}>
+              <ServiceCard text='کربوکسی تراپی' image='/services/other/carboxy.jpg' url='/services/other/carboxy' icons={''}/>
             </Grid>
           </Grid>
         </Box>

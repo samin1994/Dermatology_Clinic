@@ -9,14 +9,14 @@ export const menu = [
     },
     {
         name: 'سوالات متداول',
-        link: '/'
+        link: '/FAQs'
     },
     {
         name: 'درباره ما',
-        link: '/'
+        link: '/aboutUs'
     },
     {
         name: 'تماس با ما',
-        link: '/'
+        link: '/contactUs'
     }
 ];
