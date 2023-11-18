@@ -1,3 +1,20 @@
+.container {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.menu {
+  justify-content: right;
+  margin-right: 40px;
+  flex-direction: row-reverse;
+}
+
 .link {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .container {
+    flex-direction: row-reverse;
+  }
 }

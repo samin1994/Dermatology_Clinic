@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <AppBar position='fixed' color='background' sx={{direction:'ltr', zIndex: 3, top: 0, borderRadius: 0}}>
       <Box maxWidth="xl">
-        <Toolbar disableGutters sx={{ justifyContent: 'space-between', flexDirection: 'row'}}>
+        <Toolbar disableGutters className={styles.container}>
           <Link href={'/'} passHref legacyBehavior>
               <Box sx={{ cursor: 'pointer', display: { xs: 'none', md: 'flex' }, alignItems:'center', direction: 'ltr' }}>
                 <Image
@@ -39,7 +39,7 @@ export default function Navbar() {
             </Box>
           </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', justifyContent: 'right' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -68,29 +68,35 @@ export default function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             > 
-              {menu.map((menu) => {
+            {/* dropdown menu that is opened when size is mobile */}
+              {menu.map((menu) => { 
                 return (
-                  <Link href={`${menu.link}`} key={menu.name}>
+                  <Link href={`${menu.link}`} key={menu.name} className={styles.link}>
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{menu.name}</Typography>
+                    <Typography color='text.secondary' textAlign="center">{menu.name}</Typography>
                   </MenuItem>
                 </Link>
                 )
               })}
             </Menu>
           </Box>
-          <Box sx={{ cursor: 'pointer', display: { xs: 'flex', md: 'none', direction: 'ltr' }}} >
-            <Typography color='text.secondary'>Dr. </Typography>
-            <Typography color='secondary.main'>Negin</Typography>
-            <Typography color='text.secondary'>Safdarian</Typography>
-            <Image
-              src='/neg_vector.png'
-              alt="Dr Negin Safdarian"
-              width={70}
-              height={70}
-            />
-          </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent:'right', mr: '40px', flexDirection: 'row-reverse' }}>
+          {/* logo that is shown in mobile size */}
+          <Link href='/' className={styles.link}>
+            <Box sx={{ cursor: 'pointer', flexDirection: 'row-reverse', display: { xs: 'flex', md: 'none', direction: 'ltr' }, alignItems: 'center'}} >
+              <Box display='flex'>
+                <Typography ml={0.5} color='text.secondary'>Dr. </Typography>
+                <Typography ml={0.5} color='secondary.main'>Negin</Typography>
+                <Typography ml={0.5} color='text.secondary'>Safdarian</Typography>
+              </Box>
+              <Image
+                src='/neg_vector.png'
+                alt="Dr Negin Safdarian"
+                width={70}
+                height={70}
+              />
+            </Box>
+          </Link>
+          <Box className={styles.menu} sx={{display: { xs: 'none', md: 'flex' }}}>
 
             {menu.map((menu) => (
               <Link
@@ -100,7 +106,7 @@ export default function Navbar() {
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 className={styles.link}
               >
-                <Typography ml={3} color='text.secondary'>{menu.name}</Typography>
+                <Typography ml={3} color='text.secondary' className={styles.menuItem}>{menu.name}</Typography>
               </Link>
             ))}
           </Box>

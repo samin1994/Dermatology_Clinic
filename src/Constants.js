@@ -8,8 +8,8 @@ export const menu = [
         link: '/services'
     },
     {
-        name: 'سوالات متداول',
-        link: '/FAQs'
+        name: 'امکانات',
+        link: '/facilities'
     },
     {
         name: 'درباره ما',

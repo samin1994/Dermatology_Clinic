@@ -23,9 +23,11 @@ const Footer = () => {
                     تهران، خیابان پاسداران، بالاتر از گل نبی، بین
                      دشتستان <Typography variant='number'>7</Typography> و <Typography variant='number'>8</Typography>، ساختمان سینا، پلاک <Typography variant='number'>104</Typography>، طبقه
                       <Typography variant='number'>3</Typography>، واحد <Typography variant='number'>21</Typography></Typography>
-                <Box display='flex' alignItems='center'>
-                    <PhoneInTalkIcon className={styles.phoneIcon} sx={{ml:'7px'}}/>
-                    <Typography variant='h6'>تلفن : </Typography>
+                <Box display='flex' alignItems='center' className={styles.phone}>
+                    <Box display='flex'>
+                        <PhoneInTalkIcon className={styles.phoneIcon} sx={{ml:'7px', mt: '3px'}}/>
+                        <Typography variant='h6'>تلفن</Typography>
+                    </Box>
                     <Typography mr={1} mt={0.5} variant='number'>22883028 - 22882903</Typography>
                 </Box>
             </Box>
@@ -37,7 +39,7 @@ const Footer = () => {
                 <Typography className={[styles.description]}>کلینیک دکتر نگین صفدریان با مجموعه ای کامل 
                     از برترین تجهیزات و تکنولوژی روز دنیا و با متخصصین مجرب و کارآمد 
                     و پرسنل دوره دیده در کلیه خدمات زیبایی و پوست و مو، تجربیات موفقییت آمیزی 
-                    در کارنامه فعالیت خود ثبت کرده است. در طی فعالیت ۲۰ ساله خود، خانه سفید به دنبال بهترین 
+                    در کارنامه فعالیت خود ثبت کرده است. در طی فعالیت چندین ساله خود، به دنبال بهترین 
                     و برترین تکنیک های موجود بوده که مورد تایید وزارت بهداشت ایران و اتحادیه اروپا می باشند.</Typography>
             </Box>
         </Box>

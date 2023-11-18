@@ -1,7 +1,6 @@
 .container {
   background-color: #928691;
   width: 100%;
-  height: 385px;
   margin-top: auto;
 }
 
@@ -67,4 +66,25 @@
 .menuItem {
   cursor: pointer;
   color: black;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .upperPart {
+    display: initial;
+  }
+
+  .rightSection {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone {
+    flex-direction: column;
+  }
+
+  .lowerSection {
+    padding-inline: 30px;
+  }
 }

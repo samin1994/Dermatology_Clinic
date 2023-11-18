@@ -7,6 +7,10 @@
   color: black;
 }
 
+.container {
+  padding-inline: 130px;
+}
+
 .biography {
   margin-top: 115px;
   margin-bottom: 130px;
@@ -63,4 +67,40 @@
 
 .moreButton:hover {
   transform: scale(1.2);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .main {
+    display: initial;
+  }
+
+  .container {
+    padding-inline: 50px;
+  }
+
+  .biography {
+    margin-top: 50px;
+    margin-bottom: 65px;
+    flex-direction: column;
+  }
+
+  .bioTitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .imgContainer {
+    flex: auto;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .bioText {
+    width: fit-content;
+  }
+
+  .services {
+    display: initial;
+  }
 }

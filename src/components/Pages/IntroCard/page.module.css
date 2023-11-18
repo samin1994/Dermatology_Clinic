@@ -43,3 +43,9 @@
   text-align: justify;
   line-height: 1.7;
 }
+
+@media only screen and (min-width: 369px) and (max-width: 949px) {
+  .imageCard {
+    flex-direction: column;
+  }
+}

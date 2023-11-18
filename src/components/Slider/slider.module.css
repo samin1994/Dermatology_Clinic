@@ -1,3 +1,15 @@
+.container {
+  background-color: #928691;
+  width: 100vw;
+  height: calc(100vh - 90px);
+  position: relative;
+}
+
+.carouselItem {
+  width: 100vw;
+  height: calc(100vh - 90px);
+}
+
 .carousel > a {
   height: calc(100vh - 90px);
 }
@@ -16,3 +28,17 @@
   -webkit-border-radius: 32px;
   border-radius: 32px;
 } */
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .container {
+    height: 300px;
+  }
+
+  .carouselItem {
+    height: 300px;
+  }
+
+  .carousel > a {
+    height: 300px;
+  }
+}

@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const ServiceCard = ({image, url, icons, text, objectFit}) => {
   return (
-    <Link href={url} style={{textDecoration: 'none'}}>
+    <Link href={url} className={styles.linkContainer}>
     <Card className={styles.container}>
         <Box className={styles.titleContainer}>
           {icons !== '' ? 

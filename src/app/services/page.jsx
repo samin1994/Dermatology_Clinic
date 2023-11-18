@@ -21,22 +21,22 @@ const page = () => {
           <Image src='/neg_vector.png' width={110} height={137}/>
           <Typography variant='h4' color='text.primary' className={styles.title}>خدمات کلینیک دکتر نگین صفدریان</Typography>
         </Box>
-        <Box className={styles.services}>
-          <Grid container direction='row' justifyContent='center' columnSpacing={4} rowSpacing={7}>
-            <Grid item xs={6} md={4}>
+        {/* <Box className={styles.services}> */}
+          <Box container direction='row' justifyContent='center' className={styles.grid}>
+            <Box item xs={12} md={6} lg={4} className={styles.gridItem}>
               <ServiceCard text='تزریقات' image='/injection.jpg' url='#' icons={['/injection.png', '/injection-white.png']}/>
-            </Grid>
-            <Grid item xs={6} md={4}>
+            </Box>
+            <Box xs={12} md={6} lg={4} className={styles.gridItem}>
               <ServiceCard text='لیفت با نخ' image='/lift.jpg' url='#' icons={['/lift-icon.png', '/lift-icon-white.png']}/> 
-            </Grid>
-            <Grid item xs={6} md={4}>
+            </Box>
+            <Box xs={12} md={6} lg={4} className={styles.gridItem}>
               <ServiceCard text='لیزرها' image='/laser.jpg' url='/services/lasers' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
-            </Grid>
-            <Grid item xs={6} md={4}>
+            </Box>
+            <Box xs={12} md={6} lg={4} className={styles.gridItem}>
               <ServiceCard text='سایر خدمات' image='/miscellaneous.png' url='/services/other' icons={['/miscellaneous-icon.png', '/miscellaneous-white.png']}/>
-            </Grid>
-          </Grid>
-        </Box>
+            </Box>
+          </Box>
+        {/* </Box> */}
     </Container>
     </>
   )

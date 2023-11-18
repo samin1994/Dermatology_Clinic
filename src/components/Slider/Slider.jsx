@@ -10,14 +10,14 @@ import SliderInfo from '../SliderInfo/SliderInfo';
  
 const Slider = () => {
   return (
-    <div style={{backgroundColor: '#928691', width: '100vw', height: 'calc(100vh - 90px)', position: 'relative'}}>
+    <div className={styles.container}>
       <SliderInfo />
       <Carousel data-bs-theme="dark" 
       style={{opacity: 0.7}}
       indicators={false}
       className={styles.carousel}
       >
-        <CarouselItem style={{width: '100vw', height: 'calc(100vh - 90px)'}}>
+        <CarouselItem className={styles.carouselItem}>
           <Image
             className="d-block w-100"
             src="/1.jpg"
@@ -27,7 +27,7 @@ const Slider = () => {
           
         
         </CarouselItem>
-        <CarouselItem style={{width: '100vw', height: 'calc(100vh - 90px)'}}>
+        <CarouselItem className={styles.carouselItem}>
           <Image
             className="d-block w-100"
             src="/2.jpg"
@@ -36,7 +36,7 @@ const Slider = () => {
           />
           
         </CarouselItem>
-        <CarouselItem style={{width: '100vw', height: 'calc(100vh - 90px)'}}>
+        <CarouselItem className={styles.carouselItem}>
           <Image
             className="d-block w-100"
             src="/3.jpg"

@@ -8,3 +8,40 @@
   padding: 20px;
   text-align: center;
 }
+
+.title {
+  margin-bottom: 16px;
+}
+
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.phoneIcon {
+  margin-top: -6px;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .carousel_info {
+    padding: 7px;
+    right: 11px;
+    bottom: 11px;
+  }
+  .text {
+    font-size: 11px;
+  }
+  .title {
+    margin-bottom: 5px;
+  }
+  .phone {
+    margin-top: 5px;
+  }
+
+  .phoneIcon {
+    margin-left: 5px;
+  }
+}
