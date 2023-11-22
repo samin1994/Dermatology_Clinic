@@ -29,6 +29,9 @@ const OtherServices = () => {
           <Box item xs={6} md={4}>
             <ServiceCard text='کربوکسی تراپی' image='/services/other/carboxy.jpg' url='/services/other/carboxy' icons={''}/>
           </Box>
+          <Box item xs={6} md={4}>
+            <ServiceCard text='مزوتراپی' image='/services/other/mesotherapy.jpg' url='/services/other/mesotherapy' icons={''}/>
+          </Box>
         </Box>
         
     </Container>
