@@ -38,7 +38,7 @@ const LasersList = () => {
             <ServiceCard text='Alex' image='/services/alex.jpg' url='#' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
-            <ServiceCard text='RF فرکشنال' image='/services/RF-fractional.gif' url='#' icons={''}/>
+            <ServiceCard text='RF فرکشنال' image='/services/RF-Fractional.jpg' url='#' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
             <ServiceCard text='اندولیفت' image='/services/endolift.jpg' url='#' icons={''}/>
