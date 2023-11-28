@@ -55,7 +55,7 @@ const Footer = () => {
                 {/* <Link href='tel:982122883028' className={styles.socialIcon}>
                     <WhatsAppIcon />
                 </Link> */}
-                <Link target='_blank' href='https://www.instagram.com/dr_negin_safdarian/' className={styles.socialIcon}>
+                <Link target='_blank' href='https://www.instagram.com/dr.neginsafdarian/' className={styles.socialIcon}>
                     <InstagramIcon />
                 </Link>
             </Box>

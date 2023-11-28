@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Slider from '@/components/Slider/Slider'
 import Link from 'next/link'
-import { Box, Divider, Typography, Button} from '@mui/material'
+import { Box, Divider, Typography, Button, Container} from '@mui/material'
 import ServiceCard from '@/components/ServiceCard/ServiceCard'
 import { sharedMetadata } from '@/utils'
 
@@ -16,7 +16,7 @@ export default function Home() {
     <main className={styles.main}>
       <Slider />
       {/* main content Box*/}
-      <Box className={styles.container}>
+      <Container className={styles.container} maxWidth='xl'>
 
         {/* bio part */}
         <Box className={styles.biography}>
@@ -30,9 +30,14 @@ export default function Home() {
         </Box>
 
         {/* services part */}
-        <Box className={styles.services}>
-          <ServiceCard text='تزریقات' image='/injection.jpg' url='#' icons={['/injection.png', '/injection-white.png']}/>
-          <ServiceCard text='لیفت با نخ' image='/lift.jpg' url='#' icons={['/lift-icon.png', '/lift-icon-white.png']}/>
+        <Box container direction='row' className={styles.grid}>
+          <ServiceCard className={styles.gridItem} text='تزریقات' image='/injection.jpg' url='#' icons={['/injection.png', '/injection-white.png']}/>
+          <ServiceCard className={styles.gridItem} text='لیفت با نخ' image='/lift.jpg' url='#' icons={['/lift-icon.png', '/lift-icon-white.png']}/>
+          <Box className={`${styles.gridItem} ${styles.lastGridItem}`} >
+            <ServiceCard text='لیزرها' image='/laser.jpg' url='/services/lasers' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
+          </Box>
+        </Box>
+        <Box className={styles.lastItem}>
           <ServiceCard text='لیزرها' image='/laser.jpg' url='/services/lasers' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
         </Box>
         <Box display='flex' justifyContent='center' mb={10}>
@@ -42,7 +47,7 @@ export default function Home() {
             </Button>
           </Link>
         </Box>
-      </Box>
+      </Container>
     </main>
   )
 }

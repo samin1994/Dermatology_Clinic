@@ -7,7 +7,6 @@ import Footer from '@/components/Layout/Footer/Footer'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/theme'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {

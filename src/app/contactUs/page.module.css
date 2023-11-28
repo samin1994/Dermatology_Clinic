@@ -1,0 +1,95 @@
+.contactUsCard {
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  top: 210px; */
+  /* bottom: -30px; */
+  position: relative;
+  margin-top: -40px;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85vw;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.mainSection {
+  display: flex;
+  width: -webkit-fill-available;
+  margin-top: 20px;
+}
+
+.rightSection {
+  flex: 1;
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.workingHours {
+  width: 300px;
+  margin-right: 40px;
+}
+
+.tableRow:first-child {
+  border-bottom: 1px solid #e2befa;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.big {
+  flex-grow: 3;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sendButton {
+  width: 100%;
+  margin-top: 10px;
+  height: 55px;
+  border-radius: 7px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .mainSection {
+    flex-direction: column;
+  }
+
+  .contactInfos:last-child {
+    overflow-wrap: anywhere;
+  }
+
+  .workingHours {
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+  .mainSection {
+    flex-direction: column;
+  }
+
+  .workingHours {
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}

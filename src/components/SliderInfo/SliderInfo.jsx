@@ -12,8 +12,8 @@ const SliderInfo = () => {
       <Box className={styles.phone}>
         <PhoneEnabledIcon color='text' className={`${styles.text} ${styles.phoneIcon}`}/>
         <Box display='flex' flexDirection='column'>
-          <Link className={styles.text} underline="none" href="tel:9802122883028" color='text.primary' variant='number'>021-22883028</Link>
-          <Link className={styles.text} underline='none' href="tel:9802122882903" color='text.primary' variant='number'>021-22882903</Link>
+          <Link className={styles.text} underline="none" href="tel:982122883028" color='text.primary' variant='number'>021-22883028</Link>
+          <Link className={styles.text} underline='none' href="tel:982122882903" color='text.primary' variant='number'>021-22882903</Link>
         </Box>
         
       </Box>
