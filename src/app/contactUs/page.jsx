@@ -1,12 +1,18 @@
 'use client'
 
 import {TextField, Box, Card, Typography, 
-  TextareaAutosize as BaseTextareaAutosize, Button} from '@mui/material'
+  TextareaAutosize, Button} from '@mui/material'
 import styles from './page.module.css'
-import { styled } from '@mui/system';
-import React from 'react'
+import React, { use } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { sharedMetadata } from '@/utils'
+import {useState} from 'react'
+
+// export const metadata = {
+//   ...sharedMetadata,
+//   title: 'تماس با ما',
+// }
 
 function createData(name, value) {
   return { name, value };
@@ -17,31 +23,24 @@ const rows = [
   createData('دوشنبه تا چهارشنبه', '9 تا 13'),
 ];
 
-const Textarea = styled(BaseTextareaAutosize)(
-    ({ theme }) => `
-    width: 100%;
-    font-family: Estedad;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: '#fff';
-    border: 1px solid rgba(0, 0, 0, 0.23);
-    box-shadow: 0px 2px 2px #F3F6F9;
-
-    &:hover {
-      border-color: #A22F97;
-    }
-
-    // firefox
-    &:focus-visible {
-      outline: 0;
-    }
-  `,
-  );
-
 const ContactUs = () => {
+
+  const [inputValues, setInputValues] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '', 
+    submitted: false
+  })
+
+  const onInputChange = (event) => {
+    setInputValues({
+      ...inputValues,
+      [event.target.id]: event.target.value
+    })
+  }
+
+  console.log(inputValues)
   return (
     <>
     <Box width='100vw' height='230px' position='relative'>
@@ -58,7 +57,6 @@ const ContactUs = () => {
               <Box mb={1.5} display='flex' alignItems='start'>
                 <Image src='/contact-us/location.png' width={30} height={30} style={{marginLeft: '10px'}}/>
                 <Typography>
-                  
                       تهران، خیابان پاسداران، بالاتر از گل نبی، بین
                       دشتستان <Typography variant='number'>7</Typography> و <Typography variant='number'>8</Typography>، ساختمان سینا، پلاک <Typography variant='number'>104</Typography>، طبقه
                         <Typography variant='number'>3</Typography>، واحد <Typography variant='number'>21</Typography>
@@ -105,10 +103,10 @@ const ContactUs = () => {
               دکتر نگین صفدریان می توانید از طریق فرم زیر با ما در ارتباط باشید
             </Typography>
             <form className={styles.form}>
-              <TextField className={styles.input} id="name" label="نام و نام خانوادگی" variant="outlined" />
-              <TextField className={styles.input} id="email" label="پست الکترونیکی" variant="outlined" type='email' />
-              <TextField className={styles.input} id="phone" label="شماره تماس" variant="outlined" type='number'/>
-              <Textarea aria-label="message" minRows={5} placeholder="چگونه می توانیم به شما کمک کنیم؟" />
+              <TextField className={styles.input} onChange={(e) => onInputChange(e)} id="name" label="نام و نام خانوادگی" variant="outlined" />
+              <TextField className={styles.input} onChange={(e) => onInputChange(e)} id="email" label="پست الکترونیکی" variant="outlined" type='email' />
+              <TextField className={styles.input} onChange={(e) => onInputChange(e)} id="phone" label="شماره تماس" variant="outlined" type='number'/>
+              <TextareaAutosize className={styles.textArea} onChange={(e) => onInputChange(e)} aria-label="message" minRows={5} placeholder="چگونه می توانیم به شما کمک کنیم؟" />
               <Button type='submit' variant='contained' color='primary' className={styles.sendButton}>
                 <Typography fontWeight='600' fontSize='18px'>ارسال  پیام</Typography>
               </Button>
@@ -116,6 +114,10 @@ const ContactUs = () => {
           </Box>
         </Box>
       </Card>
+      <div style={{width: '100%', height: '300px'}} suppressHydrationWarning>
+        <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Pasdaran%20Ave,%20Dr%20Safdarian+(Dr%20Safdarian%20Clinic)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
+      </div>
     </Box>
     </>
   )
