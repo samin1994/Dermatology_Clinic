@@ -7,7 +7,8 @@ import React, { use } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { sharedMetadata } from '@/utils'
-import {useState} from 'react'
+import { Formik } from 'formik';
+
 
 // export const metadata = {
 //   ...sharedMetadata,
@@ -25,22 +26,7 @@ const rows = [
 
 const ContactUs = () => {
 
-  const [inputValues, setInputValues] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '', 
-    submitted: false
-  })
-
-  const onInputChange = (event) => {
-    setInputValues({
-      ...inputValues,
-      [event.target.id]: event.target.value
-    })
-  }
-
-  console.log(inputValues)
+  // console.log(inputValues)
   return (
     <>
     <Box width='100vw' height='230px' position='relative'>
@@ -102,15 +88,80 @@ const ContactUs = () => {
               در صورت داشتن سوال درباره خدمات کلینیک 
               دکتر نگین صفدریان می توانید از طریق فرم زیر با ما در ارتباط باشید
             </Typography>
-            <form className={styles.form}>
-              <TextField className={styles.input} onChange={(e) => onInputChange(e)} id="name" label="نام و نام خانوادگی" variant="outlined" />
-              <TextField className={styles.input} onChange={(e) => onInputChange(e)} id="email" label="پست الکترونیکی" variant="outlined" type='email' />
-              <TextField className={styles.input} onChange={(e) => onInputChange(e)} id="phone" label="شماره تماس" variant="outlined" type='number'/>
-              <TextareaAutosize className={styles.textArea} onChange={(e) => onInputChange(e)} aria-label="message" minRows={5} placeholder="چگونه می توانیم به شما کمک کنیم؟" />
-              <Button type='submit' variant='contained' color='primary' className={styles.sendButton}>
+            <Formik
+            initialValues={{ name: '', email: '', phone: '', message: '' }}
+            validate={values => {
+              const errors = {};
+              if (!values.name) {
+                errors.name = 'وارد کردن این فیلد الزامی است';
+              }
+              if (!values.phone) {
+                errors.phone = 'وارد کردن این فیلد الزامی است';
+              }
+              if (!values.message) {
+                errors.message = 'وارد کردن این فیلد الزامی است';
+              }
+              if (!values.email) {
+                errors.email = 'وارد کردن این فیلد الزامی است';
+              } else if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+              ) {
+                errors.email = 'آدرس ایمیل نامعتبر است';
+              }
+              return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
+                setSubmitting(false);
+              }, 400);
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+              /* and other goodies */
+            }) => (
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <TextField className={styles.input} 
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                id="name" label="نام و نام خانوادگی" variant="outlined" 
+                />
+              {errors.name && touched.name && errors.name}
+              <TextField className={styles.input}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                id="email" label="پست الکترونیکی" variant="outlined" type='email' 
+                />
+              {errors.email && touched.email && errors.email}
+              <TextField className={styles.input}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.phone}
+                id="phone" label="شماره تماس" variant="outlined" type='number'
+                />
+              {errors.phone && touched.phone && errors.phone}
+              <TextareaAutosize className={styles.textArea} 
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.message}
+                aria-label="message" minRows={5} placeholder="چگونه می توانیم به شما کمک کنیم؟" 
+              />
+              {errors.message && touched.message && errors.message}
+              <Button disabled={isSubmitting} type='submit' variant='contained' color='primary' className={styles.sendButton}>
                 <Typography fontWeight='600' fontSize='18px'>ارسال  پیام</Typography>
               </Button>
             </form>
+                  )}
+          </Formik>
           </Box>
         </Box>
       </Card>

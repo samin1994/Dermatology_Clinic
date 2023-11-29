@@ -122,6 +122,14 @@ const theme = createTheme({
         }
       }
     },
+    // MuiOutlinedInput: {
+    //   styleOverrides: {
+    //     root: {
+    //       marginBottom: '20px',
+    //       width: '100% !important'
+    //     }
+    //   }
+    // },
     MuiIcon: {
       styleOverrides: {
         colorPrimary: {
