@@ -122,6 +122,21 @@ const theme = createTheme({
         }
       }
     },
+    MuiSnackbar: {
+      styleOverrides: {
+        root: {
+          right: '24px !important',
+          left: 'auto !important'
+        }
+      }
+    },
+    MuiAlert: {
+      styleOverrides: {
+        message: {
+          textAlign: 'right'
+        }
+      }
+    },
     // MuiOutlinedInput: {
     //   styleOverrides: {
     //     root: {

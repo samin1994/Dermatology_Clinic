@@ -6,10 +6,12 @@ import { Box, Divider, Typography, Button, Container} from '@mui/material'
 import ServiceCard from '@/components/ServiceCard/ServiceCard'
 import { sharedMetadata } from '@/utils'
 
-export const metadata = {
-  ...sharedMetadata,
-  title: 'کلینیک دکتر صفدریان',
-}
+// export const metadata = {
+//   icons: {
+//     icon: '/neg_vector.png', // /public path
+//   },
+//   title: 'کلینیک دکتر صفدریان',
+// }
 
 export default function Home() {
   return (

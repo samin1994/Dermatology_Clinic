@@ -1,19 +1,21 @@
 'use client'
 
 import {TextField, Box, Card, Typography, 
-  TextareaAutosize, Button} from '@mui/material'
+  Snackbar, Button, Alert, AlertTitle, IconButton} from '@mui/material'
 import styles from './page.module.css'
-import React, { use } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { sharedMetadata } from '@/utils'
 import { Formik } from 'formik';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 // export const metadata = {
 //   ...sharedMetadata,
 //   title: 'تماس با ما',
 // }
+
 
 function createData(name, value) {
   return { name, value };
@@ -25,6 +27,60 @@ const rows = [
 ];
 
 const ContactUs = () => {
+
+  // on success alert for form
+  const [open, setOpen] = React.useState(false);
+  const [openError, setOpenError] = React.useState(false);
+
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleErrorClick = () => {
+    setOpenError(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const handleErrorClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpenError(false);
+  };
+
+  const submitHandler = (values, { setSubmitting, resetForm }) => {
+              setTimeout(() => {
+                //alert(JSON.stringify(values, null, 2));
+                fetch('/api/contact', {
+                  method: 'POST',
+                  headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                  },
+                  // JSON.stringify(values, null, 2)
+                  body: JSON.stringify(values, null, 2)
+                }).then((res) => {
+                  console.log('Response Retreived')
+                  if (res.status === 200) {
+                    console.log('Response Succeeded!')
+                    handleClick()
+                  }
+                  else handleErrorClick()
+                })
+                setSubmitting(false);
+                resetForm({values: ''})
+              }, 400);
+              
+            }
 
   // console.log(inputValues)
   return (
@@ -97,6 +153,10 @@ const ContactUs = () => {
               }
               if (!values.phone) {
                 errors.phone = 'وارد کردن این فیلد الزامی است';
+              } else if (
+                !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i.test(values.phone)
+              ) {
+                errors.phone = 'شماره همراه نامعتبر است'
               }
               if (!values.message) {
                 errors.message = 'وارد کردن این فیلد الزامی است';
@@ -110,12 +170,7 @@ const ContactUs = () => {
               }
               return errors;
             }}
-            onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }, 400);
-            }}
+            onSubmit={submitHandler}
           >
             {({
               values,
@@ -134,28 +189,29 @@ const ContactUs = () => {
                 value={values.name}
                 id="name" label="نام و نام خانوادگی" variant="outlined" 
                 />
-              {errors.name && touched.name && errors.name}
+              <Typography mb={2} color='error'>{errors.name && touched.name && errors.name}</Typography>
               <TextField className={styles.input}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
                 id="email" label="پست الکترونیکی" variant="outlined" type='email' 
                 />
-              {errors.email && touched.email && errors.email}
+              <Typography mb={2} color='error'>{errors.email && touched.email && errors.email}</Typography>
               <TextField className={styles.input}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.phone}
                 id="phone" label="شماره تماس" variant="outlined" type='number'
                 />
-              {errors.phone && touched.phone && errors.phone}
-              <TextareaAutosize className={styles.textArea} 
+              <Typography mb={2} color='error'>{errors.phone && touched.phone && errors.phone}</Typography>
+              <textarea rows={5} className={styles.textArea} 
+                id='message'
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.message}
-                aria-label="message" minRows={5} placeholder="چگونه می توانیم به شما کمک کنیم؟" 
+                placeholder="چگونه می توانیم به شما کمک کنیم؟" 
               />
-              {errors.message && touched.message && errors.message}
+              <Typography mb={2} color='error'>{errors.message && touched.message && errors.message}</Typography>
               <Button disabled={isSubmitting} type='submit' variant='contained' color='primary' className={styles.sendButton}>
                 <Typography fontWeight='600' fontSize='18px'>ارسال  پیام</Typography>
               </Button>
@@ -170,6 +226,29 @@ const ContactUs = () => {
         </iframe>
       </div>
     </Box>
+    <Snackbar open={open} onClose={handleClose}>
+      <Alert icon={false} severity="success"
+        sx={{direction: 'ltr'}}
+        action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+      >
+        <AlertTitle><Typography fontWeight='600'>پیام شما با موفقیت ارسال شد</Typography></AlertTitle>
+        <Typography> پاسخ را در اسرع وقت به ایمیل شما ارسال خواهیم کرد</Typography>
+      </Alert>
+    </Snackbar>
+    <Snackbar open={openError} onClose={handleErrorClose}>  
+      <Typography>خطایی پیش آمد!</Typography>
+    </Snackbar>
     </>
   )
 }

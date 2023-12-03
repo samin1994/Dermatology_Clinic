@@ -1,10 +1,9 @@
 import styles from './footer.module.css'
 import React from 'react'
 import { Typography, Box, Divider } from '@mui/material'
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+// import LocationOnIcon from '@mui/icons-material/LocationOn';
+// import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+// import InstagramIcon from '@mui/icons-material';
 import Image from 'next/image';
 import Link from 'next/link';
 import {menu} from '@/Constants'
@@ -15,7 +14,8 @@ const Footer = () => {
         <Box className={styles.upperPart}> {/* upper part of footer*/}
             <Box className={styles.rightSection}>
                 <Box display='flex' alignItems='center'>
-                    <LocationOnIcon sx={{ml:'7px'}}/>
+                    {/* <LocationOnIcon sx={{ml:'7px'}}/> */}
+                    <Image src='/contact-us/location.png' width={20} height={20} style={{marginLeft: '7px'}}/>
                     <Typography variant='h6'>آدرس</Typography>
                     
                 </Box>
@@ -23,9 +23,10 @@ const Footer = () => {
                     تهران، خیابان پاسداران، بالاتر از گل نبی، بین
                      دشتستان <Typography variant='number'>7</Typography> و <Typography variant='number'>8</Typography>، ساختمان سینا، پلاک <Typography variant='number'>104</Typography>، طبقه
                       <Typography variant='number'>3</Typography>، واحد <Typography variant='number'>21</Typography></Typography>
-                <Box display='flex' alignItems='center' className={styles.phone}>
+                <Box mt={2} display='flex' alignItems='center' className={styles.phone}>
                     <Box display='flex'>
-                        <PhoneInTalkIcon className={styles.phoneIcon} sx={{ml:'7px', mt: '3px'}}/>
+                        {/* <PhoneInTalkIcon className={styles.phoneIcon} sx={{ml:'7px', mt: '3px'}}/> */}
+                        <Image src='/contact-us/phone-call.png' width={20} height={20} style={{marginLeft: '7px', marginTop: '6px'}}/>
                         <Typography variant='h6'>تلفن</Typography>
                     </Box>
                     <Typography mr={1} mt={0.5} variant='number'>22883028 - 22882903</Typography>
@@ -56,7 +57,8 @@ const Footer = () => {
                     <WhatsAppIcon />
                 </Link> */}
                 <Link target='_blank' href='https://www.instagram.com/dr.neginsafdarian/' className={styles.socialIcon}>
-                    <InstagramIcon />
+                    <Image src='/contact-us/instagram.png' width={30} height={30} style={{marginLeft: '10px'}}/>
+                    {/* <InstagramIcon /> */}
                 </Link>
             </Box>
         </Box>
