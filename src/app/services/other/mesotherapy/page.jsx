@@ -3,8 +3,27 @@ import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
-  ...sharedMetadata,
-  title: 'مزوتراپی',
+  title: 'مزوتراپی برای درمان ریزش مو و تقویت مو | بهترین مزوتراپی در تهران | مزونیدلینگ',
+  description: `مزوتراپی یک تکنیک غیر تهاجمی است که در آن با تزریق انواع
+   داروهای مختلف از جمله هورمون، ویتامین، کافئین و… در نواحی مختلف بدن چون پوست
+   ( به صورت سطحی ) یا بافت ( به صورت عمقی) موجب ترمیم و جوان سازی و یا حذف چربی می گردد.`,
+  openGraph: {
+    title: 'مزوتراپی برای درمان ریزش مو و تقویت مو | بهترین مزوتراپی در تهران | مزونیدلینگ',
+    siteName: 'کلینیک دکتر نگین صفدریان',
+    type: 'article',
+    description: `مزوتراپی یک تکنیک غیر تهاجمی است که در آن با تزریق انواع داروهای مختلف از جمله هورمون،
+     ویتامین، کافئین و… در نواحی مختلف بدن چون پوست ( به صورت سطحی ) یا بافت 
+    ( به صورت عمقی) موجب ترمیم و جوان سازی و یا حذف چربی می گردد.`,
+    url: 'https://neginsafdarian.com/services/other/mesotherapy',
+    images: [
+      {
+        url: '/services/other/mesotherapy.jpg',
+        width: 400,
+        height: 400,
+        alt: 'مزوتراپی'
+      },
+    ]
+  }
 }
 
 const Microderm = () => {

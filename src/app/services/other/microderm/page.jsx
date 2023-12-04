@@ -7,8 +7,25 @@ import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
-  ...sharedMetadata,
-  title: 'میکرودرم',
+  title: 'کلینیک دکتر نگین صفدریان | میکرودرم ابریژن',
+  description: `میکرودرم ابریژن به معنای برداشتن قسمتی از پوست (درم) به
+   وسیله ی تکه های بسیار ریز (میکرو) تراش دهنده (ابریژن) می باشد.`,
+  openGraph: {
+    title: 'کلینیک دکتر نگین صفدریان | کربوکسی تراپی',
+    siteName: 'کلینیک دکتر نگین صفدریان',
+    type: 'article',
+    description: `میکرودرم ابریژن به معنای برداشتن قسمتی از پوست (درم) به وسیله ی
+     تکه های بسیار ریز (میکرو) تراش دهنده (ابریژن) می باشد.`,
+    url: 'https://neginsafdarian.com/services/other/microderm',
+    images: [
+      {
+        url: '/services/other/microderm.jpg',
+        width: 400,
+        height: 400,
+        alt: 'میکرودرم ابریژن'
+      },
+    ]
+  }
 }
 
 const Microderm = () => {

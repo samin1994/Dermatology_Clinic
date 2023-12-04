@@ -6,8 +6,40 @@ import { sharedMetadata } from '@/utils'
 import ServiceCard from '@/components/ServiceCard/ServiceCard'
 
 export const metadata = {
-  ...sharedMetadata,
-  title: 'خدمات',
+  title: 'کلینیک دکتر نگین صفدریان - خدمات',
+  openGraph: {
+    title: 'خدمات',
+    siteName: 'کلینیک دکتر نگین صفدریان',
+    type: 'website',
+    description: `لیست خدمات ارایه شده در کلینیک دکتر نگین صفدریان`,
+    url: 'https://neginsafdarian.com/services',
+    images: [
+      {
+        url: '/laser.jpg',
+        width: 400,
+        height: 400,
+        alt: 'لیزر'
+      },
+      {
+        url: '/injection.jpg',
+        width: 400,
+        height: 400,
+        alt: 'تزریقات'
+      },
+      {
+        url: '/lift.jpg',
+        width: 400,
+        height: 400,
+        alt: 'لیفت با نخ'
+      },
+      {
+        url: '/miscellaneous.jpg',
+        width: 400,
+        height: 400,
+        alt: 'سایر خدمات'
+      }
+    ]
+  }
 }
 
 const page = () => {
@@ -17,7 +49,7 @@ const page = () => {
       <Image src='/services-header.png' fill={true}/>
     </Box>
     <Container className={styles.container}>
-        <Box display='flex' flexDirection='column' alignItems='center'>
+        <Box display='flex' flexDirection='column' alignItems='center' mb={'55px'}>
           <Image src='/neg_vector.png' width={110} height={137}/>
           <Typography variant='h4' color='text.primary' className={styles.title}>خدمات کلینیک دکتر نگین صفدریان</Typography>
         </Box>

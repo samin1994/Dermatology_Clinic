@@ -7,8 +7,25 @@ import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
-  ...sharedMetadata,
-  title: 'کربوکسی تراپی',
+  title: 'کلینیک دکتر نگین صفدریان | کربوکسی تراپی',
+  description: `کربوکسی تراپی روشی برای جوانسازی بدن و صورت است. تزریق دی‌اکسید کربن باعث 
+  درمان زخم، از بین رفتن سلولیت، ترک پوستی، تیرگی زیر چشم و چین و چروک می‌شود.`,
+  openGraph: {
+    title: 'کلینیک دکتر نگین صفدریان | کربوکسی تراپی',
+    siteName: 'کلینیک دکتر نگین صفدریان',
+    type: 'article',
+    description: `کربوکسی تراپی روشی برای جوانسازی بدن و صورت است. تزریق دی‌اکسید کربن باعث 
+  درمان زخم، از بین رفتن سلولیت، ترک پوستی، تیرگی زیر چشم و چین و چروک می‌شود.`,
+    url: 'https://neginsafdarian.com/services/other/carboxy',
+    images: [
+      {
+        url: '/services/other/carboxy.jpg',
+        width: 400,
+        height: 400,
+        alt: 'کربوکسی تراپی'
+      },
+    ]
+  }
 }
 
 const Carboxy = () => {

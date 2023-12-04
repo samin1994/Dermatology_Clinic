@@ -6,12 +6,25 @@ import { Box, Divider, Typography, Button, Container} from '@mui/material'
 import ServiceCard from '@/components/ServiceCard/ServiceCard'
 import { sharedMetadata } from '@/utils'
 
-// export const metadata = {
-//   icons: {
-//     icon: '/neg_vector.png', // /public path
-//   },
-//   title: 'کلینیک دکتر صفدریان',
-// }
+export const metadata = {
+  title: 'کلینیک دکتر نگین صفدریان',
+  openGraph: {
+    title: 'خانه',
+    siteName: 'کلینیک دکتر نگین صفدریان',
+    type: 'website',
+    description: `در کلینیک دکتر نگین صفدریان متخصص پوست و مو جدیدترین متدهای جوانسازی پوست،
+   تزریق ژل لب و بوتاکس و انواع لیزر ارائه می شوند`,
+    locale: 'fa_IR',
+    url: 'https://neginsafdarian.com',
+    images: [
+      {
+        url: '/doctor_image.webp',
+        width: 400,
+        height: 400,
+      }
+    ]
+  }
+}
 
 export default function Home() {
   return (
