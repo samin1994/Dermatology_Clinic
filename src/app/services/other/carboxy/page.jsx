@@ -30,6 +30,10 @@ export const metadata = {
 
 const Carboxy = () => {
   return (
+    <>
+    <Box width='100vw' height='200px' position='absolute'>
+      <Image src='/services-header.png' fill={true}/>
+    </Box>
     <Container>
         <IntroCard data={{
             title: 'کربوکسی تراپی',
@@ -94,6 +98,7 @@ const Carboxy = () => {
             prosTitle: 'اثرات و فواید کربوکسی تراپی'
         }}/>
     </Container>
+    </>
   )
 }
 

@@ -30,6 +30,10 @@ export const metadata = {
 
 const Microderm = () => {
   return (
+    <>
+        <Box width='100vw' height='200px' position='absolute'>
+          <Image src='/services-header.png' fill={true}/>
+        </Box>
         <IntroCard data={{
             title: 'میکرودرم ابریژن',
             description: `میکرودرم ابریژن به معنای برداشتن قسمتی از پوست (درم) به وسیله ی تکه های بسیار
@@ -77,6 +81,7 @@ const Microderm = () => {
     ],
     prosTitle: 'اثرات و فواید میکرودرم ابریژن'
         }}/>
+    </>
   )
 }
 

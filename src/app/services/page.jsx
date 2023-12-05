@@ -45,7 +45,7 @@ export const metadata = {
 const page = () => {
   return (
     <>
-    <Box width='100vw' height='200px' position='relative'>
+    <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
     <Container className={styles.container}>

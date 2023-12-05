@@ -1,6 +1,8 @@
 import React from 'react'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {Container, Box} from '@mui/material'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'مزوتراپی برای درمان ریزش مو و تقویت مو | بهترین مزوتراپی در تهران | مزونیدلینگ',
@@ -28,7 +30,12 @@ export const metadata = {
 
 const Microderm = () => {
   return (
-        <IntroCard data={{
+        <>
+        <Box width='100vw' height='200px' position='absolute'>
+          <Image src='/services-header.png' fill={true}/>
+        </Box>
+        <Container>
+          <IntroCard data={{
             title: 'مزوتراپی',
             description: `مزوتراپی عبارت است از وارد کردن گروهی از مواد فعال بیولوژیک با
              سوزن‌هایی بسیار ریز به داخل پوست. این مواد می‌توانند شامل انواع ویتامین، 
@@ -63,6 +70,8 @@ const Microderm = () => {
     ],
     prosTitle: 'اثرات و فواید مزوتراپی'
         }}/>
+        </Container>
+    </>
   )
 }
 
