@@ -17,7 +17,7 @@ const ServiceCard = ({image, url, icons, text, objectFit}) => {
           :
           null
           }
-          <Typography className={styles.serviceTitle}
+          <Typography mr={1} className={styles.serviceTitle}
           variant='h5' color='text.secondary'>
             {text}
           </Typography>

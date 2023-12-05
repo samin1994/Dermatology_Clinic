@@ -137,6 +137,13 @@ const theme = createTheme({
         }
       }
     },
+    MuiBreadcrumbs: {
+      styleOverrides: {
+        separator: {
+          fontSize: 'xx-large'
+        }
+      }
+    },
     // MuiOutlinedInput: {
     //   styleOverrides: {
     //     root: {

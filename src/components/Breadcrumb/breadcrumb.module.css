@@ -1,3 +1,7 @@
 .link {
   text-decoration: none;
 }
+
+.MuiBreadcrumbs-separator {
+  font-size: xx-large;
+}
