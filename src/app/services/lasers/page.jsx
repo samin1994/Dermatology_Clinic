@@ -89,7 +89,7 @@ const LasersList = () => {
             <ServiceCard text='لیزر کیوسوئیچ' image='/services/QSwitch.jpg' url='#' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
-            <ServiceCard text='هایفوتراپی' image='/services/HIFU.jpg' url='#' icons={''}/>
+            <ServiceCard text='هایفوتراپی' image='/services/HIFU.jpg' url='/services/lasers/hifu' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
             <ServiceCard text='tixel (تیکسل)' image='/services/tixel.jpg' url='#' icons={''}/>

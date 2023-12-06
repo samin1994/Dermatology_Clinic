@@ -3,7 +3,6 @@ import {Container, Card, Box, Typography} from '@mui/material'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { sharedMetadata } from '@/utils'
-import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
 
 export const metadata = {

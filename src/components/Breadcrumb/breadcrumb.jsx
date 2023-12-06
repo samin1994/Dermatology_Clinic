@@ -46,6 +46,12 @@ const Breadcrumb = ({homeElement, capitalizeLinks}) => {
                         case 'Carboxy':
                             itemLink = 'کربوکسی'
                             break
+                        case 'Tixel': 
+                            itemLink = 'تیکسل'
+                            break
+                        case 'Hifu': 
+                            itemLink = 'هایفوتراپی'
+                            break
                     }
                     return (    
                         <Link key={index} className={styles.link} href={href}>
