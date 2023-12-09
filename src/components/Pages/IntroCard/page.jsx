@@ -37,7 +37,7 @@ const IntroCard = ({data}) => {
                             {value.title}
                         </Typography>
                     </Box>
-                    <Typography mb={2} pr={2}>{value.content ? value.content : ''}</Typography>
+                    <Typography variant='body1' mb={2} pr={2}>{value.content ? value.content : ''}</Typography>
                 </Box>
             )
         })}

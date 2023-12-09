@@ -52,6 +52,11 @@ const Breadcrumb = ({homeElement, capitalizeLinks}) => {
                         case 'Hifu': 
                             itemLink = 'هایفوتراپی'
                             break
+                        case 'Q-Switch':
+                            itemLink = 'کیوسوئیچ'
+                            break
+                        case 'RF-bipolar':
+                            itemLink = 'آر اف (RF)'
                     }
                     return (    
                         <Link key={index} className={styles.link} href={href}>

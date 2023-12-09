@@ -84,6 +84,9 @@ const theme = createTheme({
         },
         h6: {
           fontWeight: '600'
+        },
+        body1: {
+          lineHeight: '1.7'
         }
       }
     },
