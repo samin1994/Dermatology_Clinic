@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyFontMobile';
+  src: url('./Estedad-Black.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 html,
 body {
   direction: rtl;

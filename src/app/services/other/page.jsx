@@ -16,7 +16,7 @@ const OtherServices = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    <Container className={styles.container}>
+    <Box className={styles.container}>
         <Box className={styles.mainTitle}>
           <Image src='/neg_vector.png' width={110} height={137}/>
           <Typography variant='h4' color='text.secondary'>سایر خدمات</Typography>
@@ -32,9 +32,12 @@ const OtherServices = () => {
           <Box item xs={6} md={4}>
             <ServiceCard text='مزوتراپی' image='/services/other/mesotherapy.jpg' url='/services/other/mesotherapy' icons={''}/>
           </Box>
+          <Box item xs={6} md={4} className={styles.lastItem}>
+            <ServiceCard text='میکرونیدلینگ' image='/services/other/microneedling.jpg' url='/services/other/microneedling' icons={''}/>
+          </Box>
         </Box>
         
-    </Container>
+    </Box>
     </>
   )
 }

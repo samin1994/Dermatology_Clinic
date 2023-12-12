@@ -78,7 +78,6 @@ const LasersList = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    <Container>
         <Box display='flex' flexDirection='column' alignItems='center' mb={'55px'}>
           <Image src='/neg_vector.png' width={110} height={137}/>
           <Typography variant='h4' color='text.primary' className={styles.title}>انواع لیزرها</Typography>
@@ -113,8 +112,6 @@ const LasersList = () => {
             <ServiceCard text='RF Bipolar' image='/services/RF-bipolar.png' url='/services/lasers/RF-bipolar' icons={''} className={styles.ipl}/>
           </Box>
         </Box>
-        
-    </Container>
     </>
   )
 }

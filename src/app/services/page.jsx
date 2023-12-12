@@ -48,7 +48,7 @@ const page = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    <Container className={styles.container}>
+    <Box className={styles.container}>
         <Box display='flex' flexDirection='column' alignItems='center' mb={'55px'}>
           <Image src='/neg_vector.png' width={110} height={137}/>
           <Typography variant='h4' color='text.primary' className={styles.title}>خدمات کلینیک دکتر نگین صفدریان</Typography>
@@ -69,7 +69,7 @@ const page = () => {
             </Box>
           </Box>
         {/* </Box> */}
-    </Container>
+    </Box>
     </>
   )
 }

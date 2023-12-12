@@ -46,7 +46,7 @@ const theme = createTheme({
     divider: 'rgba(152,152,152,0.12)',
   },
   typography: {
-    fontFamily: 'Estedad',
+    fontFamily: 'Estedad, Estedad-Black',
     number: {
       fontFamily: 'Estedad-FD'
     }
