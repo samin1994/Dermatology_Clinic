@@ -5,6 +5,9 @@ import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
 //const defaultTheme = createTheme()
+import localFont from 'next/font/local'
+const myFontNumber = localFont({ src: '../public/Estedad-FD[KSHD,wght].woff2' })
+const myFontDefault = localFont({ src: '../public/Estedad[KSHD,wght].woff2' })
 
 declare module '@mui/material/styles/createTypography' {
   interface Typography {
@@ -46,9 +49,9 @@ const theme = createTheme({
     divider: 'rgba(152,152,152,0.12)',
   },
   typography: {
-    fontFamily: 'Estedad, Estedad-Black',
+    fontFamily: [myFontDefault.style.fontFamily].join(','),
     number: {
-      fontFamily: 'Estedad-FD'
+      fontFamily: [myFontNumber.style.fontFamily].join(','),
     }
   },
   components: {

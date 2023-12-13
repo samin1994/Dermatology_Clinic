@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'MyFont';
-  src: url('./Estedad[KSHD\,wght].woff2') format('woff2');
+  src: url('../public/Estedad[KSHD\,wght].woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MyFontNumber';
-  src: url('./Estedad-FD[KSHD,wght].woff2') format('woff2');
+  src: url('../public/Estedad-FD[KSHD\,wght].woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MyFontMobile';
-  src: url('./Estedad-Black.ttf') format('ttf');
+  src: url('../public/Estedad-Black.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
