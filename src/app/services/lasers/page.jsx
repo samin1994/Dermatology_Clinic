@@ -106,7 +106,7 @@ const LasersList = () => {
             <ServiceCard text='RF فرکشنال' image='/services/RF-Fractional.jpg' url='#' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
-            <ServiceCard text='اندولیفت' image='/services/endolift.jpg' url='#' icons={''}/>
+            <ServiceCard text='اندولیفت' image='/services/endolift.jpg' url='/services/lasers/endolift' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
             <ServiceCard text='RF Bipolar' image='/services/RF-bipolar.png' url='/services/lasers/RF-bipolar' icons={''} className={styles.ipl}/>
