@@ -29,7 +29,7 @@ export const metadata = {
   }
 }
 
-const HIFU = () => {
+const Endolift = () => {
   return (
     <>
     <Box width='100vw' height='200px' position='absolute'>
@@ -89,4 +89,4 @@ const HIFU = () => {
   )
 }
 
-export default HIFU
+export default Endolift
