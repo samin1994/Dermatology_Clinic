@@ -69,6 +69,13 @@ const Breadcrumb = ({homeElement, capitalizeLinks}) => {
                             break
                         case 'Fractional-CO2':
                             itemLink = 'لیزر فرکشنال CO2'
+                            break
+                        case 'Injections':
+                            itemLink = 'تزریقات'
+                            break
+                        case 'Thread-lift':
+                            itemLink = 'لیفت با نخ'
+                            break
                     }
                     return (    
                         <Link key={index} className={styles.link} href={href}>

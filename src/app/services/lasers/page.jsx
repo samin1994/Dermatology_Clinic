@@ -12,7 +12,7 @@ export const metadata = {
     siteName: 'کلینیک دکتر نگین صفدریان',
     type: 'website',
     description: `لیست انوع لیزرهایی که در کلینیک دکتر نگین صفدریان انجام میشوند.`,
-    url: 'https://neginsafdarian.com/lasers',
+    url: 'https://neginsafdarian.com/services/lasers',
     images: [
       {
         url: '/services/alex.jpg',
