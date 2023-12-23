@@ -84,31 +84,28 @@ const LasersList = () => {
         </Box>
         
         <Box container direction='row' justifyContent='center' className={styles.grid}>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='لیزر کیوسوئیچ' image='/services/QSwitch.jpg' url='/services/lasers/Q-Switch' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='هایفوتراپی' image='/services/HIFU.jpg' url='/services/lasers/hifu' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
-            <ServiceCard text='tixel (تیکسل)' image='/services/tixel.jpg' url='#' icons={''}/>
+          <Box className={styles.item} xs={6} md={4}>
+            <ServiceCard text='tixel (تیکسل)' image='/services/tixel.jpg' url='/services/lasers/tixel' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='IPL' image='/services/IPL.jpg' url='/services/lasers/IPL' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='فرکشنال CO2' image='/services/fractional.jpg' url='/services/lasers/fractional-CO2' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='Alex' image='/services/alex.jpg' url='/services/lasers/alex' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
-            <ServiceCard text='RF فرکشنال' image='/services/RF-Fractional.jpg' url='#' icons={''}/>
-          </Box>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='اندولیفت' image='/services/endolift.jpg' url='/services/lasers/endolift' icons={''}/>
           </Box>
-          <Box item xs={6} md={4}>
+          <Box className={styles.item} xs={6} md={4}>
             <ServiceCard text='RF Bipolar' image='/services/RF-bipolar.png' url='/services/lasers/RF-bipolar' icons={''} className={styles.ipl}/>
           </Box>
         </Box>
