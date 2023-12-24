@@ -76,6 +76,8 @@ const Breadcrumb = ({homeElement, capitalizeLinks}) => {
                         case 'Thread-lift':
                             itemLink = 'لیفت با نخ'
                             break
+                        case 'Fat-grafting':
+                            itemLink = 'تزریق چربی'
                     }
                     return (    
                         <Link key={index} className={styles.link} href={href}>

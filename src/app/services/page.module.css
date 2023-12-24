@@ -49,7 +49,15 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .gridItem:last-child {
-    grid-column-end: 3;
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .gridItem {
+    grid-column: span 2;
+  }
+
+  .gridItem:nth-child(4) {
+    grid-column: 2 / span 2;
   }
 }
