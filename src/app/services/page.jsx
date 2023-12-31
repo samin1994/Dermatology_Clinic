@@ -59,7 +59,7 @@ const page = () => {
               <ServiceCard text='تزریقات' image='/injection.jpg' url='/services/injections' icons={['/injection.png', '/injection-white.png']}/>
             </Box>
             <Box xs={12} md={6} lg={4} className={styles.gridItem}>
-              <ServiceCard text='لیفت با نخ' image='/thread-lift.webp' url='#' icons={['/lift-icon.png', '/lift-icon-white.png']}/> 
+              <ServiceCard text='لیفت با نخ' image='/thread-lift.webp' url='/services/thread-lift' icons={['/lift-icon.png', '/lift-icon-white.png']}/> 
             </Box>
             <Box xs={12} md={6} lg={4} className={styles.gridItem}>
               <ServiceCard text='لیزرها' image='/laser.jpg' url='/services/lasers' icons={['laser 1.svg', '/laser-icon-white.svg']}/>
