@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | جوانسازی پوست با لیزر تیکسل',
@@ -35,7 +36,7 @@ const IPL = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+    <Container>
         <IntroCard data={{
             title: 'لیزر تیکسل',
             description: `
@@ -51,7 +52,9 @@ const IPL = () => {
             ,
             image: '/services/tixel-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: `نتایج این لیزر قابل مقایسه با لیزر CO2 است و از طریق آن می توان به جوانسازی بسیار مطلوب دست یافت.
                     با لایه برداری ظریفی که از پوست می شود علاوه بر بازسازی و برداشتن سلول های مرده ی
@@ -106,9 +109,8 @@ const IPL = () => {
                     title: 'درمان روزاسه'
                 },
                 ],
-            prosTitle: 'اثرات و فواید لیزر تیکسل'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید لیزر تیکسل'}} />
+    </Container>
     </>
   )
 }

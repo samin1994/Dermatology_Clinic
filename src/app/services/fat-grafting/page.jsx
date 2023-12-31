@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | تزریق چربی با کمترین عوارض',
@@ -37,6 +38,7 @@ const FatGrafting
           <Image src='/services-header.png' fill={true}/>
         </Box>
         
+        <Container>
           <IntroCard data={{
             title: 'تزریق چربی',
             description: `
@@ -72,6 +74,33 @@ const FatGrafting
     ],
     prosTitle: 'اثرات و فواید تزریق چربی'
         }}/>
+
+    <ProsCard data={{
+            pros: [
+    {
+        content: ``,
+        title: 'برطرف کردن اسکار‌ها و جای زخم‌های صورت و بدن مانند اسکار آکنه'
+    },
+    {
+         content: ``,
+        title: 'رفع فرورفتگی‌های ناشی از لوپوس پانیکولیت'
+    },
+    {
+        content: ``,
+        title: 'رفع زخم‌های ناشی از تصادف'
+    },
+    {
+        content: ``,
+        title: 'جبران کاهش حجم صورت در بیماری‌هایی مانند آتروفی hemifacial'
+    },
+    {
+        content: ``,
+        title: 'جوانسازی ناحیه تناسلی بانوان'
+    }
+    ],
+    prosTitle: 'اثرات و فواید تزریق چربی'
+        }} />
+    </Container>
         
     </>
   )

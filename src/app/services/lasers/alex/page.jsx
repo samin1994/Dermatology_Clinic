@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر موی زائد الکس',
@@ -38,7 +39,7 @@ const Alex = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+    <Container>
         <IntroCard data={{
             title: 'لیزر موی زائد الکس',
             description: `دستگاه لیزر موی زائد الکساندارایت کلاریتی (الکس) برای از بین بردن موهای ناخواسته و زائد، منجر به از بین بردن فولیکول مو و عدم رشد مجدد مو می‌شود.
@@ -55,7 +56,10 @@ const Alex = () => {
             ,
             image: '/services/alex-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+
+      <ProsCard data={{pros: [
                 {
                     content: `مهمترین کاربرد لیزر الکس حذف مو‌های زائد است. مکانیزم رفع مو‌های زائد توسط دستگاه لیزر
                     الکس به این صورت است که طول موج منتشر شده را به گرما تبدیل می‌کند. این گرما باعث تخریب فولیکول مو می‌شود.
@@ -88,9 +92,8 @@ const Alex = () => {
                     title: 'درمان خال عروقی'
                 }
                 ],
-            prosTitle: 'اثرات و فواید لیزر الکس'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید لیزر الکس'}} />
+    </Container>
     </>
   )
 }

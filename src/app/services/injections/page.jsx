@@ -43,7 +43,7 @@ const Injections = () => {
             <ServiceCard text='تزریق مزوژل' image='/services/injection/mesogel.png' url='/services/injections' icons={''}/>
           </Box>
           <Box item xs={6} md={4}>
-            <ServiceCard text='تزریق بوتاکس' image='/services/injection/botox.jpg' url='/services/injections' icons={''}/>
+            <ServiceCard text='تزریق بوتاکس' image='/services/injection/botox.jpg' url='/services/injections/botox' icons={''}/>
           </Box>
         </Box>
     </>

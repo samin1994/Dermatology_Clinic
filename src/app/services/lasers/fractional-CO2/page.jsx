@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر فرکشنال CO2',
@@ -35,7 +36,7 @@ const HIFU = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+    <Container>
         <IntroCard data={{
             title: 'لیزر فرکشنال CO2',
             description: ` این لیزر یک روش غیر تهاجمی است و از لیزر مخصوصی
@@ -52,7 +53,9 @@ const HIFU = () => {
             ,
             image: '/services/fractional-CO2-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: `لیزر CO2 یک درمان ایمن و موثر برای انواع چین و چروک است.
                      این یک روش درمانی است که به راحتی پوست را بازسازی می کند و به سرعت چین 
@@ -91,9 +94,8 @@ const HIFU = () => {
                     title: 'از بین بردن لک'
                 }
                 ],
-            prosTitle: 'اثرات و فواید فرکشنال CO2'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید فرکشنال CO2'}} />
+    </Container>
     </>
   )
 }

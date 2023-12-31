@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | اندولیفت برای جوانسازی صورت',
@@ -35,7 +36,7 @@ const Endolift = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+    <Container>
         <IntroCard data={{
             title: 'لیزر اندولیفت',
             description: `
@@ -50,7 +51,9 @@ const Endolift = () => {
             ,
             image: '/services/endolift-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: `اندولیفت توسط لیزر پوست را از داخل هدف قرار می‌دهد 
                 و باعث کاهش چربی و سفت کردن نواحی شل یا دارای افتادگی می‌شود. گرمای تولید شده توسط لیزر رسوبات چربی را ذوب می‌کند، 
@@ -82,9 +85,8 @@ const Endolift = () => {
                     title: 'اصلاح عدم تقارن‌های بیش از حد ناشی از فیلرها'
                 }
                 ],
-            prosTitle: 'اثرات و فواید اندولیفت'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید اندولیفت'}} />
+    </Container>
     </>
   )
 }

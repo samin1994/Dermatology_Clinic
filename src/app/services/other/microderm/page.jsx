@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | میکرودرم ابریژن',
@@ -33,6 +34,7 @@ const Microderm = () => {
         <Box width='100vw' height='200px' position='absolute'>
           <Image src='/services-header.png' fill={true}/>
         </Box>
+        <Container>
         <IntroCard data={{
             title: 'میکرودرم ابریژن',
             description: `میکرودرم ابریژن به معنای برداشتن قسمتی از پوست (درم) به وسیله ی تکه های بسیار
@@ -46,7 +48,9 @@ const Microderm = () => {
                     موضعی استفاده می‌شود و پس از آن به بیمار توصیه می‌شود تا چند روز 
                 از مواجهه با نور خورشید اجتناب نموده و از پمادهای ترمیم‌کننده استفاده کند.`,
             image: '/services/other/microderm-intro.jpg',
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
     {
          content: `تمیز کردن و پاکسازی پوست
         پس از درمان، پوست به طور ناباورانه ای تمیز به نظر می رسد زیرا
@@ -78,8 +82,8 @@ const Microderm = () => {
     }
     
     ],
-    prosTitle: 'اثرات و فواید میکرودرم ابریژن'
-        }}/>
+    prosTitle: 'اثرات و فواید میکرودرم ابریژن'}} />
+        </Container>
     </>
   )
 }

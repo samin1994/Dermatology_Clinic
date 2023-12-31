@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر IPL',
@@ -35,7 +36,7 @@ const IPL = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+    <Container>
         <IntroCard data={{
             title: 'لیزر IPL',
             description: `
@@ -50,7 +51,9 @@ const IPL = () => {
             ,
             image: '/services/IPL-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: ``,
                     title: 'جوانسازی پوست'
@@ -88,9 +91,8 @@ const IPL = () => {
                     title: `فروکش کردن التهاب ناشی از بیماری‌های خودایمنی پوستی مثل لیکن پلان، پسوریازیس و...`
                 }
                 ],
-            prosTitle: 'اثرات و فواید لیزر IPL'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید لیزر IPL'}}/>
+    </Container>
     </>
   )
 }

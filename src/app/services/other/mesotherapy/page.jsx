@@ -1,6 +1,7 @@
 import React from 'react'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 import {Container, Box} from '@mui/material'
 import Image from 'next/image'
 
@@ -49,7 +50,9 @@ const Microderm = () => {
  تکنیک علاوه بر تاثیرگذاری بر تقویت و رشد مو، بهبود پوست، در لاغری و تقویت موها نیز کاربرد دارد.
 مزوتراپی باعث تغذیه و جوان سازی پوست توسط تولید کلاژن و الاستین می شود و متابولیسم پوست شما را تحریک می کند.`,
             image: '/services/other/mesotherapy-intro.jpeg',
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
     {
          content: `یکی از اثرات مزوتراپی موی سر، کاهش یا متوقف شدن
           ریزش مو است. با تحریک فولیکول‌های مو از طریق تزریق مواد مغذی،
@@ -68,8 +71,7 @@ const Microderm = () => {
     },
     
     ],
-    prosTitle: 'اثرات و فواید مزوتراپی'
-        }}/>
+    prosTitle: 'اثرات و فواید مزوتراپی'}} />
         </Container>
     </>
   )

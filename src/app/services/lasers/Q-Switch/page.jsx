@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر کیوسوئیچ',
@@ -35,7 +36,7 @@ const QSwitch = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+        <Container>
         <IntroCard data={{
             title: 'لیزر کیوسوئیچ',
             description: `
@@ -52,7 +53,9 @@ const QSwitch = () => {
             ,
             image: '/services/Q-switched-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: `لیزر‌های سوئیچ کیو در طول موج‌های مختلفی تولید می‌شوند. لیزر‌هایی با طول موج ۱۰۶۴ نانومتر (nm) 
                     برای پاک کردن خالکوبی‌های آبی تیره یا سیاه استفاده می‌شود، در حالی
@@ -83,9 +86,8 @@ const QSwitch = () => {
                     title: 'رفع هایپرپیگمنتیشن یا تیرگی پوست'
                 }
                 ],
-            prosTitle: 'اثرات و فواید لیزر کیوسوئیچ'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید لیزر کیوسوئیچ'}}/>
+      </Container>
     </>
   )
 }

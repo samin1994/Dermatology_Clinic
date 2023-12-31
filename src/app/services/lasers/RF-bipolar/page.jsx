@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر RF Bipolar',
@@ -35,7 +36,7 @@ const IPL = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+    <Container>
         <IntroCard data={{
             title: 'لیزر RF - آر اف',
             description: `آر اف یا رادیوفرکانسی درمانی تائید شده در برطرف کردن چین
@@ -54,7 +55,9 @@ const IPL = () => {
             ,
             image: '/services/RF-bipolar-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: ``,
                     title: 'رفع شلی پوست'
@@ -88,9 +91,8 @@ const IPL = () => {
                     title: `درمان افتادگی پلک`
                 }
                 ],
-            prosTitle: 'اثرات و فواید لیزر RF'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید لیزر RF'}} />
+    </Container>
     </>
   )
 }

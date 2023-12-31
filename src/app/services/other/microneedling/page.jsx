@@ -1,6 +1,7 @@
 import React from 'react'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 import {Container, Box} from '@mui/material'
 import Image from 'next/image'
 
@@ -34,6 +35,7 @@ const Microneedling = () => {
         <Box width='100vw' height='200px' position='absolute'>
           <Image src='/services-header.png' fill={true}/>
         </Box>
+        <Container>
           <IntroCard data={{
             title: 'میکرونیدلینگ',
             description: `میکرونیدلینگ که به آن Collagen Induction Therapy 
@@ -48,7 +50,9 @@ const Microneedling = () => {
              و واقعاً مؤثر شما به بیشتر از یک جلسه درمان 
             نیاز دارید تا کلاژن و الاستین بطور مداوم ساخته شوند.`,
             image: '/services/other/microneedling-intro.png',
-            pros: [
+            
+        }}/>
+      <ProsCard data={{pros: [
     {
         content: ``,
         title: 'جمع کردن منافذ پوست'
@@ -70,8 +74,8 @@ const Microneedling = () => {
         title: 'بهبود چین و وچروک پوست'
     }
     ],
-    prosTitle: 'اثرات و فواید میکرونیدلینگ'
-        }}/>
+    prosTitle: 'اثرات و فواید میکرونیدلینگ'}} />
+    </Container>
     </>
   )
 }

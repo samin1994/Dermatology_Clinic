@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | هایفوتراپی',
@@ -35,7 +36,7 @@ const HIFU = () => {
     <Box width='100vw' height='200px' position='absolute'>
       <Image src='/services-header.png' fill={true}/>
     </Box>
-    
+        <Container>
         <IntroCard data={{
             title: 'هایفوتراپی',
             description: `هایفو به عنوان یک لیفت صورت غیر تهاجمی عمل می‌کند. این روش پوست 
@@ -51,7 +52,9 @@ const HIFU = () => {
             ,
             image: '/services/HIFU-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+        <ProsCard data={{pros: [
                 {
                     content: `
 علاوه بر فواید سفت‌کننده پوست، هایفو همچنین تولید کلاژن را تقویت می‌کند که 
@@ -77,9 +80,8 @@ const HIFU = () => {
                     title: 'سفت شدن پوست افتاده در ناحیه گردن'
                 }
                 ],
-            prosTitle: 'اثرات و فواید هایفوتراپی'
-        }}/>
-    
+            prosTitle: 'اثرات و فواید هایفوتراپی'}}/>
+    </Container>
     </>
   )
 }

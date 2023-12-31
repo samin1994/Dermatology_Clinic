@@ -5,6 +5,7 @@ import styles from './page.module.css'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
+import {ProsCard} from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | کربوکسی تراپی',
@@ -50,7 +51,9 @@ const Carboxy = () => {
             و در صورت لزوم از کرم های موضعی بی حسی میتوان استفاده کرد . کربوکسی تراپی یک روش سرپایی است .`,
             image: '/services/other/carboxy-intro.jpg'
             ,
-            pros: [
+            
+        }}/>
+      <ProsCard data={{pros: [
                 {
                     content: '',
                     title: ' برطرف کردن خطوط اطراف چشم و پف و تیرگی دور چشم'
@@ -95,8 +98,7 @@ const Carboxy = () => {
                     title: 'درمان زخم های مزمن'
                 }
                 ],
-            prosTitle: 'اثرات و فواید کربوکسی تراپی'
-        }}/>
+            prosTitle: 'اثرات و فواید کربوکسی تراپی'}} />
     </Container>
     </>
   )
