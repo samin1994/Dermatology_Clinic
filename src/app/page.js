@@ -40,7 +40,7 @@ export default function Home() {
             <Typography variant='h3' color='text.secondary' className={styles.bioTitle}>دکتر نگین صفدریان</Typography>  
             <Divider />
             <p className={styles.bioText}>دکتر نگین صفدریان در سال <span>1371</span> از دانشکده پزشکی دانشگاه تهران با معدل عالی فارغ التحصیل شدند، و مجددا در سال <span>1373</span> دوره ی تخصصی پوست و مو را شروع، و در سال <span>1377</span> از دانشگاه تهران فارغ التحصیل شدند. ایشان رتبه سوم در بورد تخصصی در کل کشور بوده و &nbsp;...</p>
-            <Link href='#' style={{textDecoration: 'none'}}><Typography color='disabled'>مطالعه بیشتر</Typography></Link>
+            <Link href='/aboutUs' style={{textDecoration: 'none'}}><Typography color='disabled'>مطالعه بیشتر</Typography></Link>
           </Box>
         </Box>
 

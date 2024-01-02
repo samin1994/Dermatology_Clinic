@@ -52,7 +52,7 @@ const theme = createTheme({
     fontFamily: [myFontDefault.style.fontFamily].join(','),
     number: {
       fontFamily: [myFontNumber.style.fontFamily].join(','),
-    }
+    },
   },
   components: {
     // MuiCssBaseline: {
@@ -89,7 +89,8 @@ const theme = createTheme({
           fontWeight: '600'
         },
         body1: {
-          lineHeight: '1.7'
+          lineHeight: '1.7',
+          textAlign: 'justify'
         }
       }
     },

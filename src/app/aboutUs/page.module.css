@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.imgContainer {
+  border: 2px solid #a22f97;
+  border-radius: 8px;
+  position: relative;
+  flex: 1;
+  justify-content: center;
+  min-width: 17rem;
+}
+
+.bio_image {
+  position: relative;
+  padding: 10px 10px 0 10px;
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  margin-block: 12px;
+  width: 13rem;
+}
+
+.bioText {
+  margin-inline: 16px;
+  flex: 2;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    width: 75%;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+
+  .bioText {
+    margin-inline: 24px;
+  }
+}
