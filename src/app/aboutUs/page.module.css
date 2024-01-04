@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .imgContainer {
@@ -27,6 +27,40 @@
 .bioText {
   margin-inline: 16px;
   flex: 2;
+}
+
+.bioTitle {
+  margin-block: 8px !important;
+}
+
+.bioDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bioDetails p {
+  text-align: center;
+}
+
+.fadeItem {
+  transition: 2s all ease-in-out;
+  opacity: 0;
+}
+
+.fadein {
+  animation: fadeIn 0.9s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 768px) {
