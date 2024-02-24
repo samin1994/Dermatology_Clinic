@@ -14,13 +14,15 @@ const Breadcrumb = ({homeElement, capitalizeLinks}) => {
 // pathNames[pathNames.length - 1] === ''
 
    let item = ''
+   let show = false
    if (pathNames[0] !== undefined) {
        item = capitalizeLinks ? pathNames[0][0].toUpperCase() + pathNames[0].slice(1, pathNames[0].length) : pathNames[0]
+       show = (item === 'Facilities' || item === 'Services')
    }
    console.log('item: ', item)
     return (
         <Breadcrumbs separator="›" aria-label="breadcrumb" 
-        sx={{mr: '50px', display: item !== 'Services' ? 'none' : 'flex', mt: item === 'Services' ? '220px' : '20px'}}
+        sx={{mr: '50px', display: show ? 'flex' : 'none', mt: item === 'Services' ? '220px' : '20px'}}
         >
                 <Link className={styles.link} href={'/'}><Typography color='text.secondary'>{homeElement}</Typography></Link>
             {
@@ -81,6 +83,9 @@ const Breadcrumb = ({homeElement, capitalizeLinks}) => {
                             break
                         case 'Botox':
                             itemLink = 'بوتاکس'
+                            break
+                        case 'Facilities': 
+                            itemLink = 'امکانات'
                             break
                     }
                     return (    
