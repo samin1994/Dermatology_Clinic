@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container, Card, Box, Typography} from '@mui/material'
+import { Container, Card, Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر کیوسوئیچ',
@@ -21,7 +21,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/lasers/Q-Switch',
     images: [
       {
-        url: '/services/QSwitch.jpg',
+        url: './services/QSwitch.jpg',
         width: 400,
         height: 400,
         alt: 'لیزر کیوسوئیچ'
@@ -33,13 +33,13 @@ export const metadata = {
 const QSwitch = () => {
   return (
     <>
-    <Box width='100vw' height='200px' position='absolute'>
-      <Image src='/services-header.png' fill={true}/>
-    </Box>
-        <Container>
+      <Box width='100vw' height='200px' position='absolute'>
+        <Image src='./services-header.png' fill={true} />
+      </Box>
+      <Container>
         <IntroCard data={{
-            title: 'لیزر کیوسوئیچ',
-            description: `
+          title: 'لیزر کیوسوئیچ',
+          description: `
 لیزر Q-Switched (Nd YAG) دارای چند فرکانس 
 انرژی شامل ۵۳۲، ۷۵۵ و ۱۰۶۴ نانومتر است. این امواج برای کاربرد‌های مختلف مانند
  هدف قرار دادن لایه‌های عمیق‌تر پوست و همچنین برای رفع تیرگی ناحیه‌ای پوست (hyperpigmentation) 
@@ -50,43 +50,45 @@ const QSwitch = () => {
    بدن به طور طبیعی دفع می‌شود. همچنین این نوع لیزر ناراحتی وعوارض جانبی کمی دارد. اگرچه ممکن 
   است بیماران برای دستیابی به نتایج دلخواه خود به تعداد بیشتری جلسات درمانی نیاز داشته باشند،
    اما اثر و ماندگاری این درمان طولانی مدت خواهد بود.`
-            ,
-            image: '/services/Q-switched-intro.jpg'
-            ,
-            
-        }}/>
-        <ProsCard data={{pros: [
-                {
-                    content: `لیزر‌های سوئیچ کیو در طول موج‌های مختلفی تولید می‌شوند. لیزر‌هایی با طول موج ۱۰۶۴ نانومتر (nm) 
+          ,
+          image: './services/Q-switched-intro.jpg'
+          ,
+
+        }} />
+        <ProsCard data={{
+          pros: [
+            {
+              content: `لیزر‌های سوئیچ کیو در طول موج‌های مختلفی تولید می‌شوند. لیزر‌هایی با طول موج ۱۰۶۴ نانومتر (nm) 
                     برای پاک کردن خالکوبی‌های آبی تیره یا سیاه استفاده می‌شود، در حالی
                      که لیزر‌هایی با طول موج ۵۳۲ نانومتر می‌توانند رنگ‌های قرمز، آبی آسمانی و سبز را حذف کنند. لیزر
                      کیو سوئیچ با نفوذ به داخل پوست و سپس حرارت دادن جوهر تتو و در نهایت خرد کردن آن، خالکوبی‌ها
                      را پاک می‌کند. سپس جوهر از طریق سیستم لنفاوی از بدن خارج می‌شود. در صورت استفاده صحیح، لیزر‌های Q-switch 
                      جوهر خالکوبی را بدون آسیب رساندن یا زخمی شدن پوست اطراف تجزیه می‌کنند.`,
-                    title: 'از بین بردن تتو و خالکوبی'
-                },
-                {
-                    content: `زمانی که پالس لیزر کیوسوییچ به پوست تابانده می‌شود،
+              title: 'از بین بردن تتو و خالکوبی'
+            },
+            {
+              content: `زمانی که پالس لیزر کیوسوییچ به پوست تابانده می‌شود،
                      لایه شاخی پوست، دیواره‌های منافذ بدون آنکه ساختارهای اطراف آسیب ببینند، تحت تاثیر قرار می‌گیرند.
                      در نتیجه لیزر با تحریک کلاژن سازی باعث از بین رفتن منافذ، سفت شدن پوست و شادابی عمومی‌پوست
                      می‌شود. در حقیقت این لیزر عمل خود را از طریق تحریک تشکیل کلاژن در درم رتیکولار 
                     یا درم پاپیلاری سطحی انجام می‌دهد. تشکیل کلاژن در این نواحی می‌تواند منافذ را کوچک کند.`,
-                    title: 'درمان منافذ باز پوست'
-                },
-                {
-                    content: ``,
-                    title: 'درمان کک مک'
-                },
-                {
-                    content: ``,
-                    title: 'درمان لک‌های حاملگی یا ملاسما'
-                },
-                {
-                    content: ``,
-                    title: 'رفع هایپرپیگمنتیشن یا تیرگی پوست'
-                }
-                ],
-            prosTitle: 'اثرات و فواید لیزر کیوسوئیچ'}}/>
+              title: 'درمان منافذ باز پوست'
+            },
+            {
+              content: ``,
+              title: 'درمان کک مک'
+            },
+            {
+              content: ``,
+              title: 'درمان لک‌های حاملگی یا ملاسما'
+            },
+            {
+              content: ``,
+              title: 'رفع هایپرپیگمنتیشن یا تیرگی پوست'
+            }
+          ],
+          prosTitle: 'اثرات و فواید لیزر کیوسوئیچ'
+        }} />
       </Container>
     </>
   )

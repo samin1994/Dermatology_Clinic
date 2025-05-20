@@ -11,28 +11,28 @@ import { motion } from 'framer-motion';
 const AboutUs = () => {
 
   const duration = 1000; // ms
-const delay = 500; // ms
-var i = 0
+  const delay = 500; // ms
+  var i = 0
 
-const animStr = (i) => `fadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
+  const animStr = (i) => `fadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
 
   // console.log(inputValues)
   return (
-    <Container sx={{pb: '70px'}}>
+    <Container sx={{ pb: '70px' }}>
       <Box className={styles.main}>
         <Box className={styles.imgContainer}>
-          <Image className={styles.bio_image} width={300} height={300} src='/bio_image.png' sizes={'100vw'} alt='dr negin safdarian'/>
+          <Image className={styles.bio_image} width={300} height={300} src='./bio_image.png' sizes={'100vw'} alt='dr negin safdarian' />
         </Box>
         <Box className={styles.bioText}>
           <Typography variant='h5' color='#852b7d'>دکتر نگین صفدریان</Typography>
-          <hr className={styles.divider} color='#a22f97'/>
+          <hr className={styles.divider} color='#a22f97' />
           <Typography variant='h6' color='#ba52b0'>متخصص پوست، مو و زیبایی</Typography>
-          <Typography mt={2} variant='body1'>           
-دکتر نگین صفدریان در سال ۱۳۷۱ از دانشکده پزشکی دانشگاه تهران با معدل عالی فارغ التحصیل شدند، و مجدداً در سال ۱۳۷۳ دوره‌ی تخصصی پوست و مو را شروع، و 
-در سال ۱۳۷۷ از دانشگاه تهران فارغ التحصیل شدند. ‌ایشان رتبه سوم در بورد تخصصی در کل کشور بوده و از « زمان تا کنون اقدام به
- درمان موفقیت‌آمیز بسیاری از بیماران نموده‌اند. ‌ایشان همچنین هرساله با شرکت در کنگره‌های جهانی گوناگون در حوزه پوست و مو در
- تلاش هستند با بهره‌گیری از علوم و فنون جدید در خدمت بیماران و زیباجویان عزیز باشند. خانم دکتر عضو انجمن متخصصین پوست اروپا
- می‌باشند و همه ساله به ارائه مقالات جدید و نتیجه تجربیات درمانی خود و لیزر در زمینه پوست در کنگره‌های اروپایی می‌پردازند.
+          <Typography mt={2} variant='body1'>
+            دکتر نگین صفدریان در سال ۱۳۷۱ از دانشکده پزشکی دانشگاه تهران با معدل عالی فارغ التحصیل شدند، و مجدداً در سال ۱۳۷۳ دوره‌ی تخصصی پوست و مو را شروع، و
+            در سال ۱۳۷۷ از دانشگاه تهران فارغ التحصیل شدند. ‌ایشان رتبه سوم در بورد تخصصی در کل کشور بوده و از « زمان تا کنون اقدام به
+            درمان موفقیت‌آمیز بسیاری از بیماران نموده‌اند. ‌ایشان همچنین هرساله با شرکت در کنگره‌های جهانی گوناگون در حوزه پوست و مو در
+            تلاش هستند با بهره‌گیری از علوم و فنون جدید در خدمت بیماران و زیباجویان عزیز باشند. خانم دکتر عضو انجمن متخصصین پوست اروپا
+            می‌باشند و همه ساله به ارائه مقالات جدید و نتیجه تجربیات درمانی خود و لیزر در زمینه پوست در کنگره‌های اروپایی می‌پردازند.
           </Typography>
         </Box>
       </Box>
@@ -70,7 +70,7 @@ const animStr = (i) => `fadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwa
         <Typography className={styles.bioTitle} variant='h6' color='text.secondary'>کنفرانس‌های علمی</Typography>
         <Typography fontWeight='500' variant='body1'><b>Intense pulsed light therapy as an effective tool for reduction of pigmentation in macular amyloidosis patches</b>; EADV 2020</Typography>
         <Typography fontWeight='500' variant='body1'><b>Intense Pulsed light laser treatment of facial papules in frontal fibrosing alopecia</b>; EADV 2019</Typography>
-        <Typography fontWeight='500'  variant='body1'><b>Post-inflammatory Hyperpigmentation Treatment with combination of fractional Q-switched laser plus carboxy therapy and glycolic peeling</b>; EADV 2018</Typography>
+        <Typography fontWeight='500' variant='body1'><b>Post-inflammatory Hyperpigmentation Treatment with combination of fractional Q-switched laser plus carboxy therapy and glycolic peeling</b>; EADV 2018</Typography>
         <Typography fontWeight='500' variant='body1'><b>Fractional 1064 nm Q-switched Nd-yag laser therapy as a safe and effective tool for reducing pigmentation in macular amyloidosis patches</b>; EADV 2017</Typography>
         <Typography fontWeight='500' variant='body1'><b>Intense pulse light as a safe tool to remove melanocytic nevus</b>; EADV 2016</Typography>
         <Typography fontWeight='500' variant='body1'><b>Treatment of Becker’s nevus with Intense pulse light</b>; WCD Vancouver 2015</Typography>

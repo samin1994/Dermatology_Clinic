@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container, Card, Box, Typography} from '@mui/material'
+import { Container, Card, Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | لیزر RF Bipolar',
@@ -21,7 +21,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/lasers/RF-bipolar',
     images: [
       {
-        url: '/services/RF-bipolar.png',
+        url: './services/RF-bipolar.png',
         width: 400,
         height: 400,
         alt: 'لیزر RF Bipolar'
@@ -33,13 +33,13 @@ export const metadata = {
 const IPL = () => {
   return (
     <>
-    <Box width='100vw' height='200px' position='absolute'>
-      <Image src='/services-header.png' fill={true}/>
-    </Box>
-    <Container>
+      <Box width='100vw' height='200px' position='absolute'>
+        <Image src='./services-header.png' fill={true} />
+      </Box>
+      <Container>
         <IntroCard data={{
-            title: 'لیزر RF - آر اف',
-            description: `آر اف یا رادیوفرکانسی درمانی تائید شده در برطرف کردن چین
+          title: 'لیزر RF - آر اف',
+          description: `آر اف یا رادیوفرکانسی درمانی تائید شده در برطرف کردن چین
              و چروک‌های پوست و بهبود و ترمیم بافت پوست است که با ایجاد حرارت در لایه‌ی درم (derm) 
              پوست و تحریک فایبربلاست‌ها به کلاژن‌سازی، سبب رفع چین
               و چروک و سفت شدن پوست می‌گردد. دستگاه‌های آر اف (RF) در شکل‌های تک قطبی و دو قطبی وجود دارد که در نوع تک قطبی 
@@ -52,47 +52,49 @@ const IPL = () => {
  ظریف پوستی، افتادگی پوست و افزایش خاصیت ارتجاعی پوست می‌شود. همچنین این روش جریان گردش لنف را بهبود
  بخشیده و باعث دفع سموم و در نتیجه اکسیژن‌رسانی به پوست می‌شود و در نهایت پوستی شاداب‌تر خواهید داشت.
 `
-            ,
-            image: '/services/RF-bipolar-intro.jpg'
-            ,
-            
-        }}/>
-        <ProsCard data={{pros: [
-                {
-                    content: ``,
-                    title: 'رفع شلی پوست'
-                },
-                {
-                    content: ``,
-                    title: 'رفع چین و چروک و خطوط صورت و گردن'
-                },
-                {
-                    content: ``,
-                    title: 'جوانسازی'
-                },
-                {
-                    content: ``,
-                    title: 'کوچک کردن غبغب'
-                },
-                {
-                    content: ``,
-                    title: 'بازسازی پوست‌'
-                },
-                {
-                    content: ``,
-                    title: 'زاویه‌سازی صورت'
-                },
-                {
-                    content: ``,
-                    title: 'رفع پف پلک'
-                },
-                {
-                    content: ``,
-                    title: `درمان افتادگی پلک`
-                }
-                ],
-            prosTitle: 'اثرات و فواید لیزر RF'}} />
-    </Container>
+          ,
+          image: './services/RF-bipolar-intro.jpg'
+          ,
+
+        }} />
+        <ProsCard data={{
+          pros: [
+            {
+              content: ``,
+              title: 'رفع شلی پوست'
+            },
+            {
+              content: ``,
+              title: 'رفع چین و چروک و خطوط صورت و گردن'
+            },
+            {
+              content: ``,
+              title: 'جوانسازی'
+            },
+            {
+              content: ``,
+              title: 'کوچک کردن غبغب'
+            },
+            {
+              content: ``,
+              title: 'بازسازی پوست‌'
+            },
+            {
+              content: ``,
+              title: 'زاویه‌سازی صورت'
+            },
+            {
+              content: ``,
+              title: 'رفع پف پلک'
+            },
+            {
+              content: ``,
+              title: `درمان افتادگی پلک`
+            }
+          ],
+          prosTitle: 'اثرات و فواید لیزر RF'
+        }} />
+      </Container>
     </>
   )
 }

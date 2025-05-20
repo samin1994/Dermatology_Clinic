@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container, Card, Box, Typography} from '@mui/material'
+import { Container, Card, Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | جوانسازی پوست با لیزر تیکسل',
@@ -21,7 +21,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/lasers/tixel',
     images: [
       {
-        url: '/services/tixel.jpg',
+        url: './services/tixel.jpg',
         width: 400,
         height: 400,
         alt: 'لیزر تیکسل'
@@ -33,13 +33,13 @@ export const metadata = {
 const IPL = () => {
   return (
     <>
-    <Box width='100vw' height='200px' position='absolute'>
-      <Image src='/services-header.png' fill={true}/>
-    </Box>
-    <Container>
+      <Box width='100vw' height='200px' position='absolute'>
+        <Image src='./services-header.png' fill={true} />
+      </Box>
+      <Container>
         <IntroCard data={{
-            title: 'لیزر تیکسل',
-            description: `
+          title: 'لیزر تیکسل',
+          description: `
 دستگاه تیکسل در واقع یک فناوری عصر جدید برای
  زیبایی و جوانسازی و درمان اسکار (زخم)‌های روی بدن است که توسط کمپانی نورکسل در آلمان ساخته شده است. این
  دستگاه از فناوری پیشرفته‌ای به نام ترمومکانیکال ابلیشن برخوردار است. با استفاده از این فناوری حرارتی مکانیکی که
@@ -49,68 +49,70 @@ const IPL = () => {
   نور ندارد و برای چشم کاملاً ایمن است و نیز بدون بخارات و دود است و ماسک نیاز ندارد. زمان بهبودی بعد از لیزر یکروزه
    بوده و قرمزی پوست بسیار سریع‌تر از سایر لیزر‌ها و حداکثر ظرف ۳ تا ۵ روز از بین می‌رود. برخلاف دستگاه‌های جوانسازی مثل RF 
    فرکشنال یا مشابه آن سری دستگاه به خاطر حرارت تولیدی خود دستگاه استریل می‌شود و نیازی به تعویض سوزن برای هر بیمار نیست و در هزینه‌ها صرفه‌جویی می‌شود.`
-            ,
-            image: '/services/tixel-intro.jpg'
-            ,
-            
-        }}/>
-        <ProsCard data={{pros: [
-                {
-                    content: `نتایج این لیزر قابل مقایسه با لیزر CO2 است و از طریق آن می توان به جوانسازی بسیار مطلوب دست یافت.
+          ,
+          image: './services/tixel-intro.jpg'
+          ,
+
+        }} />
+        <ProsCard data={{
+          pros: [
+            {
+              content: `نتایج این لیزر قابل مقایسه با لیزر CO2 است و از طریق آن می توان به جوانسازی بسیار مطلوب دست یافت.
                     با لایه برداری ظریفی که از پوست می شود علاوه بر بازسازی و برداشتن سلول های مرده ی
                      سطح پوست، سبب تولید کلاژن بیشتر و در نتیجه افزایش سفتی و استحکام و رفع شلی پوست می شود.`,
-                    title: 'جوانسازی پوست'
-                },
-                {
-                    content: ``,
-                    title: 'رفع شلی و افتادگی پوست'
-                },
-                {
-                    content: ``,
-                    title: 'رفع چروک های پای چشم، دور لب و پیشانی'
-                },
-                {
-                    content: ``,
-                    title: 'رفع اسکار اکنه و برطرف کردن لک‌های تیره ناشی از دستکاری جوش‌های صورت و بدن'
-                },
-                {
-                    content: ``,
-                    title: 'رفع منافذ پوست و نمای پوست پرتقالی صورت'
-                },
-                {
-                    content: ``,
-                    title: 'رساندن مواد جوانساز به عمق پوست بدون سوزن'
-                },
-                {
-                    content: ``,
-                    title: 'لیفت پلک و پیشانی و رفع چروک‌های پیشانی'
-                },
-                {
-                    content: ``,
-                    title: `رفع چین‌های دکلته`
-                },
-                {
-                    content: ``,
-                    title: `روشن کردن و جوانسازی پوست ژنیتال`
-                },
-                {
-                    content: ``,
-                    title: 'رفع استریا و ترک‌های پوستی ناشی از کشیده شدن پوست'
-                },
-                {
-                    content: ``,
-                    title: 'برطرف کردن لک‌های پوستی و وارت‌های ریز سطح پوست صورت'
-                },
-                {
-                    content: `
+              title: 'جوانسازی پوست'
+            },
+            {
+              content: ``,
+              title: 'رفع شلی و افتادگی پوست'
+            },
+            {
+              content: ``,
+              title: 'رفع چروک های پای چشم، دور لب و پیشانی'
+            },
+            {
+              content: ``,
+              title: 'رفع اسکار اکنه و برطرف کردن لک‌های تیره ناشی از دستکاری جوش‌های صورت و بدن'
+            },
+            {
+              content: ``,
+              title: 'رفع منافذ پوست و نمای پوست پرتقالی صورت'
+            },
+            {
+              content: ``,
+              title: 'رساندن مواد جوانساز به عمق پوست بدون سوزن'
+            },
+            {
+              content: ``,
+              title: 'لیفت پلک و پیشانی و رفع چروک‌های پیشانی'
+            },
+            {
+              content: ``,
+              title: `رفع چین‌های دکلته`
+            },
+            {
+              content: ``,
+              title: `روشن کردن و جوانسازی پوست ژنیتال`
+            },
+            {
+              content: ``,
+              title: 'رفع استریا و ترک‌های پوستی ناشی از کشیده شدن پوست'
+            },
+            {
+              content: ``,
+              title: 'برطرف کردن لک‌های پوستی و وارت‌های ریز سطح پوست صورت'
+            },
+            {
+              content: `
 روزاسه یکی از بیماری‌های شایع پوستی خانم‌ها بخصوص خانم‌های میانسال است که با التهاب، قرمزی و 
 برافروختگی پوست و بروز جوش در صورت همراه است و معمولاً مزمن و آزاردهنده است. لیزر تیکسل با کمترین قرمزی و تحریک به سرعت 
 و در عرض یک هفته، کیفیت پوست را بهبود بخشیده و قرمزی، التهاب و نمای پوست پرتقالی ناشی از روزاسه را بهبود می‌بخشد.`,
-                    title: 'درمان روزاسه'
-                },
-                ],
-            prosTitle: 'اثرات و فواید لیزر تیکسل'}} />
-    </Container>
+              title: 'درمان روزاسه'
+            },
+          ],
+          prosTitle: 'اثرات و فواید لیزر تیکسل'
+        }} />
+      </Container>
     </>
   )
 }

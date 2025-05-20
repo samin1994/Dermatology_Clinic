@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container, Card, Box, Typography} from '@mui/material'
+import { Container, Card, Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | میکرودرم ابریژن',
@@ -19,7 +19,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/other/microderm',
     images: [
       {
-        url: '/services/other/microderm.jpg',
+        url: './services/other/microderm.jpg',
         width: 400,
         height: 400,
         alt: 'میکرودرم ابریژن'
@@ -31,13 +31,13 @@ export const metadata = {
 const Microderm = () => {
   return (
     <>
-        <Box width='100vw' height='200px' position='absolute'>
-          <Image src='/services-header.png' fill={true}/>
-        </Box>
-        <Container>
+      <Box width='100vw' height='200px' position='absolute'>
+        <Image src='./services-header.png' fill={true} />
+      </Box>
+      <Container>
         <IntroCard data={{
-            title: 'میکرودرم ابریژن',
-            description: `میکرودرم ابریژن به معنای برداشتن قسمتی از پوست (درم) به وسیله ی تکه های بسیار
+          title: 'میکرودرم ابریژن',
+          description: `میکرودرم ابریژن به معنای برداشتن قسمتی از پوست (درم) به وسیله ی تکه های بسیار
                     ریز (میکرو) تراش دهنده (ابریژن) می باشد. این روش همانند پرداخت کردن 
                 یک چوب بوسیله یک کاغذ سمباده ظریف می باشد تا سطح آن صاف و صیقلی شود.
                 در این روش، پزشک می‌کوشد با سایش فیزیکی (یا با مواد شیمیایی)
@@ -47,12 +47,13 @@ const Microderm = () => {
                     مانند اکسید آلومینیوم استفاده می‌شود. قبل از لایه برداری گاه از بی‌حسی
                     موضعی استفاده می‌شود و پس از آن به بیمار توصیه می‌شود تا چند روز 
                 از مواجهه با نور خورشید اجتناب نموده و از پمادهای ترمیم‌کننده استفاده کند.`,
-            image: '/services/other/microderm-intro.jpg',
-            
-        }}/>
-        <ProsCard data={{pros: [
-    {
-         content: `تمیز کردن و پاکسازی پوست
+          image: './services/other/microderm-intro.jpg',
+
+        }} />
+        <ProsCard data={{
+          pros: [
+            {
+              content: `تمیز کردن و پاکسازی پوست
         پس از درمان، پوست به طور ناباورانه ای تمیز به نظر می رسد زیرا
         پروسه تراشیدن با کریستال ها یا سرهای الماسی تمام
         اضافات پوست (شامل: سلول های مرده، چربی اضافه
@@ -60,30 +61,31 @@ const Microderm = () => {
         پوست تمیز برای چشمگیری از ایجاد ناصافی ها و 
         ضایعات ساختاری پوست لازم است. تمیز کردن پوست یکی از
         اجزای برنامه های مراقبت های پوستی می باشد.`,
-        title: 'تمیز کردن و پاکسازی پوست'
-    },
-    {
-        content: `یکی از اثرات مفید میکرودرم ابریژن، تحریک فعالیت بازسازی طبیعی پوست بدن می باشد.
+              title: 'تمیز کردن و پاکسازی پوست'
+            },
+            {
+              content: `یکی از اثرات مفید میکرودرم ابریژن، تحریک فعالیت بازسازی طبیعی پوست بدن می باشد.
          با تحریک افزایش جریان خون به پوست، میکرودرم
          ابریژن سبب تسریع در تولید سلول های جدید پوست می شود
          و سرعت حرکت آنها را به سمت پوست افزایش می دهد
         . بنابراین پوست جوان و باطرا وت به نظر می رسد .کلاژن
          به پوست قوام و انعطاف پذیری می دهد، اما، با 
         افزایش سن کاهش میزان آن سبب چین و چروک و افتادگی پوست می شود.)`,
-        title: 'تسریع در بازسازی پوست'
-    },
-    {
-        content: `میکروم بخصوص به رفع و بسته شدن منافذ پوستی کمک میکند.`,
-        title: 'رفع منافذ پوست'
-    },
-    {
-        title: 'کمک به درمان لک و ملاسما ولکه های افتابی',
-        content: 'با لایه برداری از لکه ها امکان نفوذ داروهای ضد لک به ناحیه لک بیشتر می‌شود در عین حال اثر نفوذ لیزرهای ضد لک نیز بیشتر می‌شود. '
-    }
-    
-    ],
-    prosTitle: 'اثرات و فواید میکرودرم ابریژن'}} />
-        </Container>
+              title: 'تسریع در بازسازی پوست'
+            },
+            {
+              content: `میکروم بخصوص به رفع و بسته شدن منافذ پوستی کمک میکند.`,
+              title: 'رفع منافذ پوست'
+            },
+            {
+              title: 'کمک به درمان لک و ملاسما ولکه های افتابی',
+              content: 'با لایه برداری از لکه ها امکان نفوذ داروهای ضد لک به ناحیه لک بیشتر می‌شود در عین حال اثر نفوذ لیزرهای ضد لک نیز بیشتر می‌شود. '
+            }
+
+          ],
+          prosTitle: 'اثرات و فواید میکرودرم ابریژن'
+        }} />
+      </Container>
     </>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
-import {Container, Box} from '@mui/material'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
+import { Container, Box } from '@mui/material'
 import Image from 'next/image'
 
 export const metadata = {
@@ -20,7 +20,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/other/mesotherapy',
     images: [
       {
-        url: '/services/other/mesotherapy.jpg',
+        url: './services/other/mesotherapy.jpg',
         width: 400,
         height: 400,
         alt: 'مزوتراپی'
@@ -31,14 +31,14 @@ export const metadata = {
 
 const Microderm = () => {
   return (
-        <>
-        <Box width='100vw' height='200px' position='absolute'>
-          <Image src='/services-header.png' fill={true}/>
-        </Box>
-        <Container>
-          <IntroCard data={{
-            title: 'مزوتراپی',
-            description: `مزوتراپی عبارت است از وارد کردن گروهی از مواد فعال بیولوژیک با
+    <>
+      <Box width='100vw' height='200px' position='absolute'>
+        <Image src='./services-header.png' fill={true} />
+      </Box>
+      <Container>
+        <IntroCard data={{
+          title: 'مزوتراپی',
+          description: `مزوتراپی عبارت است از وارد کردن گروهی از مواد فعال بیولوژیک با
              سوزن‌هایی بسیار ریز به داخل پوست. این مواد می‌توانند شامل انواع ویتامین، 
             دارو یا فاکتورهای رشد باشند. مزوتراپی نوعی روش درمانی تزریقی است که در تمام
              دنیا، کاربرد زیادی در درمان‌های زیبایی دارد. در واقع مزوتراپی استفاده 
@@ -49,30 +49,32 @@ const Microderm = () => {
  و بازسـازی پـوست، که توسط تزریق ویتامیـن ها، آمینـو اسیدها، مواد معدنی و… انجام می گـردد. این
  تکنیک علاوه بر تاثیرگذاری بر تقویت و رشد مو، بهبود پوست، در لاغری و تقویت موها نیز کاربرد دارد.
 مزوتراپی باعث تغذیه و جوان سازی پوست توسط تولید کلاژن و الاستین می شود و متابولیسم پوست شما را تحریک می کند.`,
-            image: '/services/other/mesotherapy-intro.jpeg',
-            
-        }}/>
-        <ProsCard data={{pros: [
-    {
-         content: `یکی از اثرات مزوتراپی موی سر، کاهش یا متوقف شدن
+          image: './services/other/mesotherapy-intro.jpeg',
+
+        }} />
+        <ProsCard data={{
+          pros: [
+            {
+              content: `یکی از اثرات مزوتراپی موی سر، کاهش یا متوقف شدن
           ریزش مو است. با تحریک فولیکول‌های مو از طریق تزریق مواد مغذی،
           ریشه‌های مو تقویت می‌شوند و ریزش مو به طور قابل توجهی کاهش می‌یابد.
            علاوه بر این، مزوتراپی با تامین تغذیه سلول‌های مو، موجب ایجاد 
           موهای سالم‌تر و قوی‌تر می‌شود. مواد مغذی مورد نیاز به صورت مستقیم به ریشه‌های
            مو تزریق می‌شوند و این کار تا حد زیادی موجب متوقف شدن ریزش مو به می‌شود.`,
-        title: 'جلوگیری از ریزش مو'
-    },
-    {
-        content: `همچنین، مزوتراپی باعث ضخیم و پرپشت شدن موها می‌شود.
+              title: 'جلوگیری از ریزش مو'
+            },
+            {
+              content: `همچنین، مزوتراپی باعث ضخیم و پرپشت شدن موها می‌شود.
          از دست دادن مو ممکن است به شکل ریزش مو، 
         نازک شدن، شکنندگی و کاهش حجم موها رخ دهد. با تزریق مواد
          مغذی مورد نیاز به فولیکول‌های مو، موها قوی‌تر شده و  ضخیم و پرپشت می‌شوند.`,
-        title: 'تقویت مو'
-    },
-    
-    ],
-    prosTitle: 'اثرات و فواید مزوتراپی'}} />
-        </Container>
+              title: 'تقویت مو'
+            },
+
+          ],
+          prosTitle: 'اثرات و فواید مزوتراپی'
+        }} />
+      </Container>
     </>
   )
 }

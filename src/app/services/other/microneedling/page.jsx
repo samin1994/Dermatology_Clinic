@@ -1,8 +1,8 @@
 import React from 'react'
 import { sharedMetadata } from '@/utils'
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
-import {Container, Box} from '@mui/material'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
+import { Container, Box } from '@mui/material'
 import Image from 'next/image'
 
 export const metadata = {
@@ -20,7 +20,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/other/microneedling',
     images: [
       {
-        url: '/services/other/microneedling.jpg',
+        url: './services/other/microneedling.jpg',
         width: 400,
         height: 400,
         alt: 'میکرونیدلینگ'
@@ -31,14 +31,14 @@ export const metadata = {
 
 const Microneedling = () => {
   return (
-        <>
-        <Box width='100vw' height='200px' position='absolute'>
-          <Image src='/services-header.png' fill={true}/>
-        </Box>
-        <Container>
-          <IntroCard data={{
-            title: 'میکرونیدلینگ',
-            description: `میکرونیدلینگ که به آن Collagen Induction Therapy 
+    <>
+      <Box width='100vw' height='200px' position='absolute'>
+        <Image src='./services-header.png' fill={true} />
+      </Box>
+      <Container>
+        <IntroCard data={{
+          title: 'میکرونیدلینگ',
+          description: `میکرونیدلینگ که به آن Collagen Induction Therapy 
             هم گفته می‌شود، یک درمان نسبتاً غیرتهاجمی می‌باشد. در این روش از سوزن‌های بسیار 
             ظریف برای ایجاد آسیب‌های بسیار جزئی و در نتیجه بالا بردن مکانیزم
              سلولی استفاده می‌شود. در این روش فرایند ترمیم پوست و سپس بازسازی
@@ -49,33 +49,35 @@ const Microneedling = () => {
              گذشت چندروز نتایج خوبی قابل مشاهده می‌باشد. گرچه برای نتیجه مطلوب
              و واقعاً مؤثر شما به بیشتر از یک جلسه درمان 
             نیاز دارید تا کلاژن و الاستین بطور مداوم ساخته شوند.`,
-            image: '/services/other/microneedling-intro.png',
-            
-        }}/>
-      <ProsCard data={{pros: [
-    {
-        content: ``,
-        title: 'جمع کردن منافذ پوست'
-    },
-    {
-         content: ``,
-        title: 'از بین بردن جای جوش'
-    },
-    {
-        content: ``,
-        title: 'جوانسازی صورت'
-    },
-    {
-        content: ``,
-        title: 'روشن کردن پوست'
-    },
-    {
-        content: ``,
-        title: 'بهبود چین و وچروک پوست'
-    }
-    ],
-    prosTitle: 'اثرات و فواید میکرونیدلینگ'}} />
-    </Container>
+          image: './services/other/microneedling-intro.png',
+
+        }} />
+        <ProsCard data={{
+          pros: [
+            {
+              content: ``,
+              title: 'جمع کردن منافذ پوست'
+            },
+            {
+              content: ``,
+              title: 'از بین بردن جای جوش'
+            },
+            {
+              content: ``,
+              title: 'جوانسازی صورت'
+            },
+            {
+              content: ``,
+              title: 'روشن کردن پوست'
+            },
+            {
+              content: ``,
+              title: 'بهبود چین و وچروک پوست'
+            }
+          ],
+          prosTitle: 'اثرات و فواید میکرونیدلینگ'
+        }} />
+      </Container>
     </>
   )
 }

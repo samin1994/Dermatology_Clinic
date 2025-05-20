@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container, Card, Box, Typography} from '@mui/material'
+import { Container, Card, Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import { sharedMetadata } from '@/utils'
 import DoneIcon from '@mui/icons-material/Done';
 import IntroCard from '@/components/Pages/IntroCard/page'
-import {ProsCard} from '@/components/Pages/IntroCard/page'
+import { ProsCard } from '@/components/Pages/IntroCard/page'
 
 export const metadata = {
   title: 'کلینیک دکتر نگین صفدریان | تزریق چربی با کمترین عوارض',
@@ -21,7 +21,7 @@ export const metadata = {
     url: 'https://neginsafdarian.com/services/fat-grafting',
     images: [
       {
-        url: '/thread-lift.webp',
+        url: './thread-lift.webp',
         width: 400,
         height: 400,
         alt: 'تزریق چربی'
@@ -31,13 +31,13 @@ export const metadata = {
 }
 
 const FatGrafting
- = () => {
-  return (
-        <>
+  = () => {
+    return (
+      <>
         <Box width='100vw' height='200px' position='absolute'>
-          <Image src='/services-header.png' fill={true}/>
+          <Image src='./services-header.png' fill={true} />
         </Box>
-        
+
         <Container>
           <IntroCard data={{
             title: 'تزریق چربی',
@@ -49,61 +49,61 @@ const FatGrafting
   می‌باشند خارج می‌کند. این سلول‌ها زنده‌مانی خود را حفظ می‌کنند و می‌توان آن‌ها را به نواحی مورد نیاز مانند گونه‌ها،
    زیر چشم، زاویه‌ی فک، چانه و خط خنده تزریق کرد. چربی مورد استفاده برای انتقال چربی، از شکم یا ران خارج شده و به ناحیه
    دیگری تزریق می‌شود. مزیت پیوند چربی این است که چربی اتولوگ است (از بدن شما می‌آید)، بنابراین واکنش‌های آلرژیک رخ نمی‌دهد.`,
-            image: '/services/fat-grafting-intro.jpg',
+            image: './services/fat-grafting-intro.jpg',
             pros: [
-    {
-        content: ``,
-        title: 'برطرف کردن اسکار‌ها و جای زخم‌های صورت و بدن مانند اسکار آکنه'
-    },
-    {
-         content: ``,
-        title: 'رفع فرورفتگی‌های ناشی از لوپوس پانیکولیت'
-    },
-    {
-        content: ``,
-        title: 'رفع زخم‌های ناشی از تصادف'
-    },
-    {
-        content: ``,
-        title: 'جبران کاهش حجم صورت در بیماری‌هایی مانند آتروفی hemifacial'
-    },
-    {
-        content: ``,
-        title: 'جوانسازی ناحیه تناسلی بانوان'
-    }
-    ],
-    prosTitle: 'اثرات و فواید تزریق چربی'
-        }}/>
+              {
+                content: ``,
+                title: 'برطرف کردن اسکار‌ها و جای زخم‌های صورت و بدن مانند اسکار آکنه'
+              },
+              {
+                content: ``,
+                title: 'رفع فرورفتگی‌های ناشی از لوپوس پانیکولیت'
+              },
+              {
+                content: ``,
+                title: 'رفع زخم‌های ناشی از تصادف'
+              },
+              {
+                content: ``,
+                title: 'جبران کاهش حجم صورت در بیماری‌هایی مانند آتروفی hemifacial'
+              },
+              {
+                content: ``,
+                title: 'جوانسازی ناحیه تناسلی بانوان'
+              }
+            ],
+            prosTitle: 'اثرات و فواید تزریق چربی'
+          }} />
 
-    <ProsCard data={{
+          <ProsCard data={{
             pros: [
-    {
-        content: ``,
-        title: 'برطرف کردن اسکار‌ها و جای زخم‌های صورت و بدن مانند اسکار آکنه'
-    },
-    {
-         content: ``,
-        title: 'رفع فرورفتگی‌های ناشی از لوپوس پانیکولیت'
-    },
-    {
-        content: ``,
-        title: 'رفع زخم‌های ناشی از تصادف'
-    },
-    {
-        content: ``,
-        title: 'جبران کاهش حجم صورت در بیماری‌هایی مانند آتروفی hemifacial'
-    },
-    {
-        content: ``,
-        title: 'جوانسازی ناحیه تناسلی بانوان'
-    }
-    ],
-    prosTitle: 'اثرات و فواید تزریق چربی'
-        }} />
-    </Container>
-        
-    </>
-  )
-}
+              {
+                content: ``,
+                title: 'برطرف کردن اسکار‌ها و جای زخم‌های صورت و بدن مانند اسکار آکنه'
+              },
+              {
+                content: ``,
+                title: 'رفع فرورفتگی‌های ناشی از لوپوس پانیکولیت'
+              },
+              {
+                content: ``,
+                title: 'رفع زخم‌های ناشی از تصادف'
+              },
+              {
+                content: ``,
+                title: 'جبران کاهش حجم صورت در بیماری‌هایی مانند آتروفی hemifacial'
+              },
+              {
+                content: ``,
+                title: 'جوانسازی ناحیه تناسلی بانوان'
+              }
+            ],
+            prosTitle: 'اثرات و فواید تزریق چربی'
+          }} />
+        </Container>
+
+      </>
+    )
+  }
 
 export default FatGrafting
