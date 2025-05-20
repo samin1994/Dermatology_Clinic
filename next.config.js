@@ -9,8 +9,8 @@ const nextConfig = {
             allowFutureImage: true
         }
     },
-    basePath: isGithubPages ? '/your-repo-name' : '',
-    assetPrefix: isGithubPages ? '/your-repo-name/' : '',
+    basePath: isGithubPages ? '/Dermatology_Clinic' : '',
+    assetPrefix: isGithubPages ? '/Dermatology_Clinic/' : '',
     trailingSlash: true, // important for static exports
 }
 
