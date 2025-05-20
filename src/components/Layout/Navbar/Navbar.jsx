@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href={'/'} passHref legacyBehavior>
             <Box sx={{ cursor: 'pointer', display: { xs: 'none', md: 'flex' }, alignItems: 'center', direction: 'ltr' }}>
               <Image
-                src='./neg_vector.png'
+                src='/neg_vector.png'
                 alt="Dr Negin Safdarian"
                 width={70}
                 height={70}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 <Typography ml={0.5} color='text.secondary'>Safdarian</Typography>
               </Box>
               <Image
-                src='./neg_vector.png'
+                src='/neg_vector.png'
                 alt="Dr Negin Safdarian"
                 width={70}
                 height={70}
